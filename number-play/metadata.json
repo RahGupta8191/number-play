@@ -1,0 +1,252 @@
+{
+  "chapter_id": "grade7_number_play",
+  "chapter_name": "Number Play",
+  "grade": 7,
+  "description": "Explore the magic of numbers! Learn patterns, sequences, divisibility, and solve number puzzles \u2014 all in a fun, step-by-step adventure.",
+  "total_subtopics": 5,
+  "total_concepts": 15,
+  "total_questions": 45,
+  "scoring": {
+    "base_score_per_question": 10,
+    "attempt_factors": {
+      "attempt_1": 1.0,
+      "attempt_2": 0.8,
+      "attempt_3": 0.6
+    },
+    "hint_factors": {
+      "hints_0": 1.0,
+      "hints_1": 0.9,
+      "hints_2": 0.8,
+      "hints_3": 0.7
+    },
+    "time_factors": {
+      "within_expected": 1.0,
+      "up_to_1_5x": 0.9,
+      "up_to_2x": 0.8,
+      "over_2x": 0.7
+    },
+    "topic_score_formula": "new = 0.7 * current + 0.3 * (earned / base * 100), clamped to [0, 100]"
+  },
+  "subtopics": [
+    {
+      "id": "kc1",
+      "name": "Number Patterns",
+      "order": 1,
+      "icon": "\ud83d\udd22",
+      "description": "Discover the hidden rules inside number sequences",
+      "concept_count": 3,
+      "question_count": 9,
+      "concepts": [
+        {
+          "id": "kc1_c1",
+          "name": "Constant Difference Patterns",
+          "order": 1,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc1_c2",
+          "name": "Multiplicative (Geometric) Patterns",
+          "order": 2,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc1_c3",
+          "name": "Growing Differences (Second-Order Patterns)",
+          "order": 3,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        }
+      ]
+    },
+    {
+      "id": "kc2",
+      "name": "Odd & Even Numbers",
+      "order": 2,
+      "icon": "\u2696\ufe0f",
+      "description": "Master the rules of odd and even \u2014 classify any number instantly!",
+      "concept_count": 3,
+      "question_count": 9,
+      "concepts": [
+        {
+          "id": "kc2_c1",
+          "name": "Identifying Odd and Even Numbers",
+          "order": 1,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc2_c2",
+          "name": "Arithmetic Rules for Odd and Even",
+          "order": 2,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc2_c3",
+          "name": "Counting Odd and Even Numbers in a Range",
+          "order": 3,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        }
+      ]
+    },
+    {
+      "id": "kc3",
+      "name": "Divisibility Rules",
+      "order": 3,
+      "icon": "\u2797",
+      "description": "Test divisibility in seconds \u2014 no long division needed!",
+      "concept_count": 3,
+      "question_count": 9,
+      "concepts": [
+        {
+          "id": "kc3_c1",
+          "name": "Divisibility by 2, 5 and 10",
+          "order": 1,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc3_c2",
+          "name": "Divisibility by 3 and 9",
+          "order": 2,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc3_c3",
+          "name": "Combined Divisibility Tests",
+          "order": 3,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        }
+      ]
+    },
+    {
+      "id": "kc4",
+      "name": "Number Sequences",
+      "order": 4,
+      "icon": "\ud83d\udcc8",
+      "description": "Arithmetic, geometric, triangular and square number series",
+      "concept_count": 3,
+      "question_count": 9,
+      "concepts": [
+        {
+          "id": "kc4_c1",
+          "name": "Arithmetic Sequences",
+          "order": 1,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc4_c2",
+          "name": "Geometric Sequences",
+          "order": 2,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc4_c3",
+          "name": "Triangular, Square and Oblong Numbers",
+          "order": 3,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        }
+      ]
+    },
+    {
+      "id": "kc5",
+      "name": "Logical Number Puzzles",
+      "order": 5,
+      "icon": "\ud83e\udde9",
+      "description": "Use clues to find mystery numbers \u2014 constraint-based reasoning!",
+      "concept_count": 3,
+      "question_count": 9,
+      "concepts": [
+        {
+          "id": "kc5_c1",
+          "name": "Constraint-Based Elimination",
+          "order": 1,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc5_c2",
+          "name": "Sum and Product Puzzles",
+          "order": 2,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        },
+        {
+          "id": "kc5_c3",
+          "name": "Working Backwards \u2014 Inverse Operations",
+          "order": 3,
+          "question_count": 3,
+          "difficulty_range": [
+            1,
+            3
+          ],
+          "hints_per_question": 3
+        }
+      ]
+    }
+  ]
+}

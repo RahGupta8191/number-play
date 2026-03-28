@@ -1,0 +1,1795 @@
+{
+  "chapter_id": "grade7_number_play",
+  "chapter_name": "Number Play",
+  "grade": 7,
+  "description": "Explore the magic of numbers! Learn patterns, sequences, divisibility, and solve number puzzles — all in a fun, step-by-step adventure.",
+  "subtopics": [
+    {
+      "id": "kc1",
+      "name": "Number Patterns",
+      "order": 1,
+      "icon": "🔢",
+      "description": "Discover the hidden rules inside number sequences",
+      "concepts": [
+        {
+          "id": "kc1_c1",
+          "name": "Constant Difference Patterns",
+          "order": 1,
+          "explanation": {
+            "title": "What is a Constant Difference Pattern?",
+            "body": "Imagine you are climbing stairs — each step takes you up by the SAME height. In a number sequence, a constant difference pattern works exactly the same way: you add (or subtract) the SAME number each time.\n\nFor example: 3, 7, 11, 15 — you always add 4. That +4 is the 'rule'.\n\nHow to find the rule:\n1. Subtract any term from the NEXT term.\n2. If the answer is the same every time → that IS your rule.\n3. Use the rule to find the next term.",
+            "key_idea": "The difference between consecutive terms is always the same — that difference IS the rule."
+          },
+          "story_example": {
+            "title": "Priya's Piggy Bank 🐷",
+            "body": "Priya saves ₹5 every day. On Day 1 she has ₹5, Day 2 she has ₹10, Day 3 she has ₹15, Day 4 she has ₹20. Can you predict Day 5? Yes — ₹25! The pattern is +5 each day. This is a constant-difference pattern."
+          },
+          "solved_examples": [
+            {
+              "question": "Find the next two terms: 4, 7, 10, 13, ___, ___",
+              "steps": [
+                "Step 1 — Find differences: 7−4=3, 10−7=3, 13−10=3",
+                "Step 2 — Rule is: +3 each time (constant!)",
+                "Step 3 — Extend: 13+3=16, 16+3=19"
+              ],
+              "answer": "16, 19"
+            },
+            {
+              "question": "What is the rule in: 20, 17, 14, 11?",
+              "steps": [
+                "Step 1 — Differences: 17−20=−3, 14−17=−3, 11−14=−3",
+                "Step 2 — All differences equal −3",
+                "Step 3 — Rule: subtract 3 each time"
+              ],
+              "answer": "Rule is −3"
+            },
+            {
+              "question": "What is the 6th term of: 2, 6, 10, 14, ...?",
+              "steps": [
+                "Step 1 — Difference: 6−2=4, 10−6=4 → rule is +4",
+                "Step 2 — 5th term: 14+4=18",
+                "Step 3 — 6th term: 18+4=22"
+              ],
+              "answer": "22"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc1_c1_q1",
+              "difficulty": 1,
+              "question": "What is the next term in the sequence: 5, 10, 15, 20, ___?",
+              "options": [
+                {"key": "A", "text": "22"},
+                {"key": "B", "text": "25"},
+                {"key": "C", "text": "30"},
+                {"key": "D", "text": "24"}
+              ],
+              "correct_answer": "B",
+              "explanation": "The constant difference is +5. So 20 + 5 = 25.",
+              "expected_time": 45,
+              "base_score": 10,
+              "hints": [
+                "Write down the numbers and look at what is being added each time.",
+                "All the differences are equal to 5. This is a constant-difference pattern.",
+                "Add 5 to the last term: 20 + 5 = 25."
+              ],
+              "remedial": {
+                "title": "Constant-Difference Patterns",
+                "explanation": "In a constant-difference pattern, you add the SAME number every time. To find the rule, subtract any term from the next term.",
+                "rule": "Subtract each term from the next: (2nd − 1st), (3rd − 2nd), etc. If all results match, that is your rule.",
+                "example": "3, 7, 11, 15 → differences: 4, 4, 4 → rule is +4.",
+                "apply": "5, 10, 15, 20 → differences: 5, 5, 5 → rule is +5 → next term = 20 + 5 = 25."
+              }
+            },
+            {
+              "id": "kc1_c1_q2",
+              "difficulty": 1,
+              "question": "Which sequence shows a decreasing pattern with rule −4?",
+              "options": [
+                {"key": "A", "text": "20, 16, 12, 8, 4"},
+                {"key": "B", "text": "20, 24, 28, 32"},
+                {"key": "C", "text": "20, 15, 10, 5"},
+                {"key": "D", "text": "20, 10, 5, 2.5"}
+              ],
+              "correct_answer": "A",
+              "explanation": "16−20=−4, 12−16=−4, 8−12=−4, 4−8=−4. Constant difference of −4.",
+              "expected_time": 50,
+              "base_score": 10,
+              "hints": [
+                "A decreasing pattern means each term is smaller than the one before it. Which options are decreasing?",
+                "Options A, C, and D are decreasing. Check each: subtract consecutive terms in A. Is the difference always −4?",
+                "A: 16−20=−4, 12−16=−4, 8−12=−4, 4−8=−4. All differences are −4."
+              ],
+              "remedial": {
+                "title": "Decreasing Arithmetic Patterns",
+                "explanation": "A decreasing pattern means each term is less than the previous — the constant difference is negative.",
+                "rule": "Subtract consecutive terms. If all results equal the same negative number, that is the rule.",
+                "example": "50, 45, 40, 35 → differences: −5, −5, −5 → rule is −5.",
+                "apply": "Option A: 16−20=−4, 12−16=−4, 8−12=−4, 4−8=−4. Rule is −4."
+              }
+            },
+            {
+              "id": "kc1_c1_q3",
+              "difficulty": 2,
+              "question": "What is the 7th term of the sequence: 3, 8, 13, 18, ...?",
+              "options": [
+                {"key": "A", "text": "33"},
+                {"key": "B", "text": "38"},
+                {"key": "C", "text": "28"},
+                {"key": "D", "text": "23"}
+              ],
+              "correct_answer": "A",
+              "explanation": "Rule is +5. Continuing: 23, 28, 33. The 7th term is 33.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "Find the difference between consecutive terms first.",
+                "The difference is 5 each time. The 4th term is 18. Keep adding 5.",
+                "5th term: 23, 6th term: 28, 7th term: 33."
+              ],
+              "remedial": {
+                "title": "Extending a Constant-Difference Sequence",
+                "explanation": "Once you know the rule, keep applying it to reach any term.",
+                "rule": "nth term = first term + (n−1) × difference.",
+                "example": "3, 8, 13... rule = +5. 7th term = 3 + (7−1)×5 = 3 + 30 = 33.",
+                "apply": "Start at 3, add 5 six times: 8, 13, 18, 23, 28, 33."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc1_c2",
+          "name": "Multiplicative (Geometric) Patterns",
+          "order": 2,
+          "explanation": {
+            "title": "What is a Multiplicative Pattern?",
+            "body": "What if instead of adding the same number, you MULTIPLY by the same number each time? That is a multiplicative (or geometric) pattern!\n\nFor example: 2, 4, 8, 16, 32 — each term is multiplied by 2.\n\nHow to find the rule:\n1. DIVIDE any term by the PREVIOUS term.\n2. If the answer is always the same → that is the multiplier (ratio).\n3. Multiply the last term by the ratio to find the next term.",
+            "key_idea": "Divide consecutive terms to find the multiplier. Unlike addition patterns, these grow very fast!"
+          },
+          "story_example": {
+            "title": "The Magic Doubling Jar 🫙",
+            "body": "Arjun puts 1 marble in a magic jar. Each day the number of marbles doubles! Day 1: 1, Day 2: 2, Day 3: 4, Day 4: 8, Day 5: 16. The rule is ×2. On Day 10, he would have 512 marbles — that is how fast these patterns grow!"
+          },
+          "solved_examples": [
+            {
+              "question": "Find the next term: 2, 4, 8, 16, ___",
+              "steps": [
+                "Step 1 — Divide: 4÷2=2, 8÷4=2, 16÷8=2",
+                "Step 2 — Multiplier (ratio) = 2",
+                "Step 3 — Next term: 16 × 2 = 32"
+              ],
+              "answer": "32"
+            },
+            {
+              "question": "Find the next term: 3, 9, 27, 81, ___",
+              "steps": [
+                "Step 1 — Divide: 9÷3=3, 27÷9=3, 81÷27=3",
+                "Step 2 — Ratio = 3",
+                "Step 3 — Next term: 81 × 3 = 243"
+              ],
+              "answer": "243"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc1_c2_q1",
+              "difficulty": 1,
+              "question": "What is the rule for the sequence: 3, 9, 27, 81?",
+              "options": [
+                {"key": "A", "text": "Add 6 each time"},
+                {"key": "B", "text": "Multiply by 3 each time"},
+                {"key": "C", "text": "Add 18 each time"},
+                {"key": "D", "text": "Multiply by 2 each time"}
+              ],
+              "correct_answer": "B",
+              "explanation": "9÷3=3, 27÷9=3, 81÷27=3. The constant multiplier is 3.",
+              "expected_time": 50,
+              "base_score": 10,
+              "hints": [
+                "Try subtracting consecutive terms: 9−3=6, 27−9=18. Are the differences equal?",
+                "The differences (6, 18) are NOT equal, so it is not an additive pattern. Try dividing instead: 9÷3=?, 27÷9=?",
+                "9÷3=3 and 27÷9=3 and 81÷27=3. Every term is 3 times the previous one."
+              ],
+              "remedial": {
+                "title": "Multiplicative (Geometric) Patterns",
+                "explanation": "When differences are unequal, try dividing instead. If division gives a constant result, that is your multiplier.",
+                "rule": "Divide (2nd ÷ 1st), (3rd ÷ 2nd). If equal, that is the ratio.",
+                "example": "2, 6, 18, 54 → 6÷2=3, 18÷6=3, 54÷18=3 → rule is ×3.",
+                "apply": "3, 9, 27, 81 → 9÷3=3, 27÷9=3 → rule is multiply by 3."
+              }
+            },
+            {
+              "id": "kc1_c2_q2",
+              "difficulty": 2,
+              "question": "What is the next term in: 5, 10, 20, 40, ___?",
+              "options": [
+                {"key": "A", "text": "60"},
+                {"key": "B", "text": "70"},
+                {"key": "C", "text": "80"},
+                {"key": "D", "text": "50"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Each term is multiplied by 2. 40 × 2 = 80.",
+              "expected_time": 45,
+              "base_score": 10,
+              "hints": [
+                "Check if the differences are equal first: 10−5=5, 20−10=10. Are they equal?",
+                "Differences are NOT equal, so try dividing: 10÷5=?, 20÷10=?",
+                "Each term is doubled: 10÷5=2, 20÷10=2, 40÷20=2. So next = 40 × 2 = 80."
+              ],
+              "remedial": {
+                "title": "Identifying Geometric Patterns",
+                "explanation": "When a sequence doubles, triples, or multiplies consistently, it is geometric. Divide to find the ratio.",
+                "rule": "Find ratio = any term ÷ previous term. Multiply last term by ratio for next.",
+                "example": "5, 10, 20, 40 → ratio = 10÷5 = 2. Next = 40 × 2 = 80.",
+                "apply": "Always divide, not subtract, to check for geometric patterns."
+              }
+            },
+            {
+              "id": "kc1_c2_q3",
+              "difficulty": 3,
+              "question": "A sequence starts at 2 and each term is multiplied by 3. What is the 5th term?",
+              "options": [
+                {"key": "A", "text": "54"},
+                {"key": "B", "text": "162"},
+                {"key": "C", "text": "81"},
+                {"key": "D", "text": "243"}
+              ],
+              "correct_answer": "B",
+              "explanation": "Sequence: 2, 6, 18, 54, 162. The 5th term is 162.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "Write out the sequence term by term: 1st = 2, 2nd = 2×3 = 6...",
+                "3rd = 18, 4th = 54. What is the 5th?",
+                "5th term = 54 × 3 = 162."
+              ],
+              "remedial": {
+                "title": "Finding Any Term in a Geometric Sequence",
+                "explanation": "Multiply the starting number by the ratio, repeatedly, until you reach the term you need.",
+                "rule": "nth term = first term × ratio^(n−1).",
+                "example": "Start=2, ratio=3. 5th term = 2 × 3^4 = 2 × 81 = 162.",
+                "apply": "List: 2 → 6 → 18 → 54 → 162. Count to the 5th."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc1_c3",
+          "name": "Growing Differences (Second-Order Patterns)",
+          "order": 3,
+          "explanation": {
+            "title": "What if the Differences Keep Growing?",
+            "body": "Sometimes a sequence does NOT have a constant difference OR a constant multiplier. Instead, the DIFFERENCES THEMSELVES follow a pattern!\n\nFor example: 1, 3, 6, 10, 15 — differences are +2, +3, +4, +5. Each difference grows by 1.\n\nHow to solve:\n1. Find the first differences (gaps between terms).\n2. Find the second differences (gaps between the gaps).\n3. If second differences are constant → you can extend the pattern.\n4. Add the next first-difference to get the next term.",
+            "key_idea": "Look at the differences OF the differences. These are called second-order differences."
+          },
+          "story_example": {
+            "title": "Handshakes at a Party 🤝",
+            "body": "At a party with 2 people: 1 handshake. With 3 people: 3 handshakes. With 4 people: 6 handshakes. With 5 people: 10 handshakes. The gaps grow: +2, +3, +4... These are called triangular numbers, and they are a perfect example of a growing-difference pattern!"
+          },
+          "solved_examples": [
+            {
+              "question": "Find the next term: 1, 3, 6, 10, 15, ___",
+              "steps": [
+                "Step 1 — First differences: 3−1=2, 6−3=3, 10−6=4, 15−10=5",
+                "Step 2 — Differences grow by 1 each time (+2, +3, +4, +5, ...)",
+                "Step 3 — Next difference = +6",
+                "Step 4 — Next term: 15 + 6 = 21"
+              ],
+              "answer": "21 (Triangular numbers)"
+            },
+            {
+              "question": "Find the missing term: 2, 5, 10, 17, ___, 37",
+              "steps": [
+                "Step 1 — First differences: 3, 5, 7, ?, 11 (missing one!)",
+                "Step 2 — Second differences: 3→5 is +2, 5→7 is +2 → pattern of +2",
+                "Step 3 — Missing first difference = 7+2 = 9",
+                "Step 4 — Missing term = 17 + 9 = 26"
+              ],
+              "answer": "26"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc1_c3_q1",
+              "difficulty": 2,
+              "question": "Find the missing term: 2, 5, 10, 17, ___, 37",
+              "options": [
+                {"key": "A", "text": "24"},
+                {"key": "B", "text": "25"},
+                {"key": "C", "text": "26"},
+                {"key": "D", "text": "28"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Differences: +3, +5, +7, +9, +11. Missing first diff = 9. 17 + 9 = 26.",
+              "expected_time": 70,
+              "base_score": 10,
+              "hints": [
+                "Write the differences between consecutive terms: 5−2=3, 10−5=5, 17−10=7. Do you notice a pattern in those differences?",
+                "The differences are 3, 5, 7 — they increase by 2 each time. What comes after 7? The next difference is 9.",
+                "Add the next difference to 17: 17 + 9 = 26. Check: 37 − 26 = 11 = 9 + 2. Correct!"
+              ],
+              "remedial": {
+                "title": "Second-Order (Growing) Differences",
+                "explanation": "When the gaps between terms are not constant, look at the gaps between the gaps — those are the second-order differences.",
+                "rule": "Step 1: Find first differences. Step 2: Find second differences. Step 3: Extend them to find the missing first difference, then extend the sequence.",
+                "example": "First diffs: 3, 5, 7, ?, 11. Second diffs: +2, +2, +2. Missing first diff = 9. Missing term = 17 + 9 = 26.",
+                "apply": "Differences increase by 2 each time: 3, 5, 7, 9, 11."
+              }
+            },
+            {
+              "id": "kc1_c3_q2",
+              "difficulty": 2,
+              "question": "What are the next TWO terms in: 100, 90, 81, 73, 66, ___, ___?",
+              "options": [
+                {"key": "A", "text": "60, 55"},
+                {"key": "B", "text": "59, 52"},
+                {"key": "C", "text": "60, 54"},
+                {"key": "D", "text": "60, 53"}
+              ],
+              "correct_answer": "A",
+              "explanation": "Differences: −10, −9, −8, −7, −6, −5. 66−6=60 and 60−5=55.",
+              "expected_time": 75,
+              "base_score": 10,
+              "hints": [
+                "Find the differences: 90−100=−10, 81−90=−9, 73−81=−8, 66−73=−7. What pattern do you see?",
+                "The differences are −10, −9, −8, −7 — they increase by 1 each time (become less negative). What is the next difference after −7?",
+                "Next difference = −6, then −5. So: 66 + (−6) = 60, and 60 + (−5) = 55."
+              ],
+              "remedial": {
+                "title": "Sequences with Changing Differences",
+                "explanation": "Sometimes differences shrink or grow in a pattern. Find the pattern of the differences to predict the next terms.",
+                "rule": "Step 1: Find first differences. Step 2: Check if they change by a constant amount. Step 3: Extend.",
+                "example": "Diffs: −10, −9, −8, −7 (each +1). Next diffs: −6, −5. Next terms: 66−6=60, 60−5=55.",
+                "apply": "Always write out the differences first. Look for patterns in those differences."
+              }
+            },
+            {
+              "id": "kc1_c3_q3",
+              "difficulty": 3,
+              "question": "What is the next term in: 1, 4, 9, 16, 25, ___?",
+              "options": [
+                {"key": "A", "text": "30"},
+                {"key": "B", "text": "36"},
+                {"key": "C", "text": "35"},
+                {"key": "D", "text": "32"}
+              ],
+              "correct_answer": "B",
+              "explanation": "These are perfect squares: 1²=1, 2²=4, 3²=9, 4²=16, 5²=25, 6²=36.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "Find the differences: 4−1=3, 9−4=5, 16−9=7, 25−16=9. What pattern is in these differences?",
+                "Differences are 3, 5, 7, 9 — odd numbers increasing by 2. Next difference = 11.",
+                "Next term = 25 + 11 = 36. Also: these are perfect squares! 1², 2², 3², 4², 5², 6²=36."
+              ],
+              "remedial": {
+                "title": "Square Numbers as a Growing-Difference Pattern",
+                "explanation": "Perfect squares (1, 4, 9, 16, 25...) have differences that are the odd numbers (3, 5, 7, 9, 11...).",
+                "rule": "Differences of squares: 3, 5, 7, 9, 11... Next difference = previous + 2.",
+                "example": "25 + 11 = 36 = 6².",
+                "apply": "Recognise that 1, 4, 9, 16, 25 = 1², 2², 3², 4², 5². Next is 6² = 36."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc2",
+      "name": "Odd & Even Numbers",
+      "order": 2,
+      "icon": "⚖️",
+      "description": "Master the rules of odd and even — classify any number instantly!",
+      "concepts": [
+        {
+          "id": "kc2_c1",
+          "name": "Identifying Odd and Even Numbers",
+          "order": 1,
+          "explanation": {
+            "title": "How to Tell if a Number is Odd or Even",
+            "body": "Here is the secret: you only need to look at the LAST digit of any number!\n\n• Even numbers end in: 0, 2, 4, 6, or 8\n• Odd numbers end in: 1, 3, 5, 7, or 9\n\nEven means the number can be split into two EQUAL groups. 6 apples → 3 in each hand. Odd means one apple is always left over. 7 apples → 3 in each hand + 1 left over!\n\nThis works for ANY number — 1, 1,000,000, or even 4,738,291. Just check the last digit.",
+            "key_idea": "Only the LAST digit of a number determines whether it is odd or even."
+          },
+          "story_example": {
+            "title": "The Pair-Up Game 👥",
+            "body": "Rahul's class of 28 students lines up in pairs. 28 ends in 8 (even) — everyone gets a partner! Next day, 27 students come. 27 ends in 7 (odd) — one student is always left without a partner. Last digit tells everything!"
+          },
+          "solved_examples": [
+            {
+              "question": "Is 4,738 odd or even?",
+              "steps": [
+                "Step 1 — Look at last digit: 8",
+                "Step 2 — 8 is in the even set (0,2,4,6,8): 4,738 is EVEN",
+                "Verify: 4,738 ÷ 2 = 2,369 — no remainder ✓"
+              ],
+              "answer": "EVEN"
+            },
+            {
+              "question": "Is 10,001 odd or even?",
+              "steps": [
+                "Step 1 — Last digit: 1",
+                "Step 2 — 1 is in the odd set (1,3,5,7,9): 10,001 is ODD"
+              ],
+              "answer": "ODD"
+            },
+            {
+              "question": "How many even numbers are there between 11 and 25 (exclusive)?",
+              "steps": [
+                "Step 1 — List numbers between 11 and 25 (not including them): 12, 13...24",
+                "Step 2 — Pick even ones: 12, 14, 16, 18, 20, 22, 24",
+                "Step 3 — Count: 7"
+              ],
+              "answer": "7"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc2_c1_q1",
+              "difficulty": 1,
+              "question": "Which of the following numbers is ODD?",
+              "options": [
+                {"key": "A", "text": "4,682"},
+                {"key": "B", "text": "3,570"},
+                {"key": "C", "text": "7,913"},
+                {"key": "D", "text": "2,048"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Last digit of 7,913 is 3, which is odd. All others end in even digits.",
+              "expected_time": 40,
+              "base_score": 10,
+              "hints": [
+                "To identify odd or even, you only need to look at one digit. Which digit is that?",
+                "Look only at the LAST digit. Even last digits: 0,2,4,6,8. Odd last digits: 1,3,5,7,9.",
+                "A) last digit 2 → even. B) last digit 0 → even. C) last digit 3 → ODD. D) last digit 8 → even."
+              ],
+              "remedial": {
+                "title": "Identifying Odd and Even Numbers",
+                "explanation": "No matter how large the number, only the UNITS digit (last digit) tells you if it is odd or even.",
+                "rule": "Even: ends in 0,2,4,6,8. Odd: ends in 1,3,5,7,9.",
+                "example": "4,782 → last digit 2 → EVEN. 5,937 → last digit 7 → ODD.",
+                "apply": "7,913 → last digit 3 → ODD."
+              }
+            },
+            {
+              "id": "kc2_c1_q2",
+              "difficulty": 1,
+              "question": "How many even numbers are there between 11 and 25 (exclusive)?",
+              "options": [
+                {"key": "A", "text": "5"},
+                {"key": "B", "text": "6"},
+                {"key": "C", "text": "7"},
+                {"key": "D", "text": "8"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Even numbers between 11 and 25 (not including 11 or 25): 12, 14, 16, 18, 20, 22, 24 — that is 7.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "First, what does 'exclusive' mean? It means 11 and 25 are NOT included. List all whole numbers strictly between 11 and 25.",
+                "Numbers between 11 and 25 (exclusive): 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24. Now pick only the even ones.",
+                "Even numbers in that list: 12, 14, 16, 18, 20, 22, 24. Count them: that is 7 numbers."
+              ],
+              "remedial": {
+                "title": "Counting Even Numbers in a Range",
+                "explanation": "'Between 11 and 25 exclusive' means start from 12 and stop at 24.",
+                "rule": "List even numbers from the first even after lower bound to last even before upper bound.",
+                "example": "Formula: Count = (last even − first even) ÷ 2 + 1 = (24 − 12) ÷ 2 + 1 = 7.",
+                "apply": "12, 14, 16, 18, 20, 22, 24 — count = 7."
+              }
+            },
+            {
+              "id": "kc2_c1_q3",
+              "difficulty": 2,
+              "question": "Which of these numbers is EVEN?",
+              "options": [
+                {"key": "A", "text": "1,001"},
+                {"key": "B", "text": "3,457"},
+                {"key": "C", "text": "9,999"},
+                {"key": "D", "text": "8,764"}
+              ],
+              "correct_answer": "D",
+              "explanation": "8,764 ends in 4, which is even. All others end in odd digits.",
+              "expected_time": 35,
+              "base_score": 10,
+              "hints": [
+                "Check only the last digit of each number.",
+                "A ends in 1 (odd), B ends in 7 (odd), C ends in 9 (odd). What about D?",
+                "D: 8,764 ends in 4. 4 is even. So 8,764 is EVEN."
+              ],
+              "remedial": {
+                "title": "Quick Even/Odd Check",
+                "explanation": "You never need to do any calculation. Just look at the ones digit (the last digit).",
+                "rule": "Last digit 0,2,4,6,8 → EVEN. Last digit 1,3,5,7,9 → ODD.",
+                "example": "8,764 → last digit 4 → EVEN.",
+                "apply": "1001→1(odd), 3457→7(odd), 9999→9(odd), 8764→4(EVEN)."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc2_c2",
+          "name": "Arithmetic Rules for Odd and Even",
+          "order": 2,
+          "explanation": {
+            "title": "The Rules of Odd and Even Arithmetic",
+            "body": "When you add, subtract or multiply odd and even numbers, there are PREDICTABLE rules!\n\nAddition rules:\n• Even + Even = Even (4+6=10)\n• Odd + Odd = Even (3+5=8) ← two leftovers pair up!\n• Even + Odd = Odd (4+3=7) ← the one leftover stays\n\nMultiplication rules:\n• Even × Anything = Even (4×7=28, 4×3=12)\n• Odd × Odd = Odd (3×5=15)\n\nMemory trick: Even is 'greedy' in multiplication — if ANY factor is even, the product is even!",
+            "key_idea": "In multiplication, if even one factor is even, the product is ALWAYS even."
+          },
+          "story_example": {
+            "title": "Pairing Socks 🧦",
+            "body": "Even number of socks → all paired. Odd number of socks → one lonely sock. Add two odd numbers: both have a lonely sock → the two lonely socks pair up → result is EVEN! Add odd + even: the lonely sock stays lonely → result is ODD. The socks never lie!"
+          },
+          "solved_examples": [
+            {
+              "question": "Is the sum of 47 and 83 odd or even?",
+              "steps": [
+                "Step 1 — 47 is odd, 83 is odd",
+                "Step 2 — Odd + Odd = Even",
+                "Verify: 47 + 83 = 130 → last digit 0 → Even ✓"
+              ],
+              "answer": "EVEN"
+            },
+            {
+              "question": "A number is multiplied by 6. Can the result be odd?",
+              "steps": [
+                "Step 1 — 6 is even",
+                "Step 2 — Even × anything = Even",
+                "Step 3 — No — the result is ALWAYS even, regardless of what number is multiplied by 6."
+              ],
+              "answer": "No, always even"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc2_c2_q1",
+              "difficulty": 1,
+              "question": "What is the result when an odd number is added to an even number?",
+              "options": [
+                {"key": "A", "text": "Always even"},
+                {"key": "B", "text": "Always odd"},
+                {"key": "C", "text": "Could be either"},
+                {"key": "D", "text": "Always zero"}
+              ],
+              "correct_answer": "B",
+              "explanation": "Odd + Even = Odd. Example: 5 + 4 = 9 (odd).",
+              "expected_time": 45,
+              "base_score": 10,
+              "hints": [
+                "Try a small example: pick any odd number and any even number and add them. What do you get?",
+                "Try 3 + 4 = 7 (odd). Try 7 + 6 = 13 (odd). Does this always hold? Think about why.",
+                "An even number ends in 0,2,4,6,8. An odd number ends in 1,3,5,7,9. Adding them always gives an odd last digit."
+              ],
+              "remedial": {
+                "title": "Arithmetic Rules for Odd and Even Numbers",
+                "explanation": "Even + Even = Even. Odd + Odd = Even. Even + Odd = ODD.",
+                "rule": "Even + Odd always gives ODD. Think: even is like 0 socks left over, odd is like 1 left over. 0+1=1 leftover → ODD.",
+                "example": "4 + 3 = 7 (odd). 10 + 7 = 17 (odd).",
+                "apply": "Odd + Even = ODD, always."
+              }
+            },
+            {
+              "id": "kc2_c2_q2",
+              "difficulty": 2,
+              "question": "The product of two numbers is 35. What can you say about the two numbers?",
+              "options": [
+                {"key": "A", "text": "Both must be even"},
+                {"key": "B", "text": "Both must be odd"},
+                {"key": "C", "text": "One is odd, one is even"},
+                {"key": "D", "text": "Nothing can be determined"}
+              ],
+              "correct_answer": "B",
+              "explanation": "35 is odd. Even × anything = Even. So 35 must be Odd × Odd = Odd.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "35 is an odd number. Can an even number be one of the factors? Think about what even × anything gives.",
+                "Even × any number is always even. Since 35 is odd, neither factor can be even.",
+                "Both factors must be odd. Check: 5 × 7 = 35 (both odd ✓). Also 1 × 35 (both odd ✓)."
+              ],
+              "remedial": {
+                "title": "Multiplication Rules for Odd and Even",
+                "explanation": "Even × anything = Even. This means if a product is odd, NEITHER factor can be even.",
+                "rule": "Odd product → both factors must be Odd. Even product → at least one factor is Even.",
+                "example": "35 is odd. So both factors of 35 must be odd: 5 × 7 = 35 ✓.",
+                "apply": "If the result is odd, both numbers multiplied must be odd."
+              }
+            },
+            {
+              "id": "kc2_c2_q3",
+              "difficulty": 2,
+              "question": "If n is odd, which expression is ALWAYS even?",
+              "options": [
+                {"key": "A", "text": "n + 1"},
+                {"key": "B", "text": "n + 2"},
+                {"key": "C", "text": "n × 1"},
+                {"key": "D", "text": "n − 2"}
+              ],
+              "correct_answer": "A",
+              "explanation": "Odd + 1 (even) = Even. n+2 = Odd+Even = Odd. n×1 = Odd. n−2 = Odd−Even = Odd.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "n is odd. Try n=3 and test each option: A) 3+1=4, B) 3+2=5, C) 3×1=3, D) 3−2=1. Which results are even?",
+                "Only A gives an even result for n=3. Now verify for another odd: n=7. A) 7+1=8 (even ✓).",
+                "The rule: Odd + 1 (even) = Even. Adding 1 to an odd number always gives an even number."
+              ],
+              "remedial": {
+                "title": "Algebraic Odd/Even Reasoning",
+                "explanation": "Substitute a specific odd number (e.g. 3 or 5) to test each option. Then confirm with the rule.",
+                "rule": "n+1: Odd+Even=Even ✓. n+2: Odd+Even=Odd ✗. n×1: Odd×Odd=Odd ✗. n−2: Odd−Even=Odd ✗.",
+                "example": "n=5: A) 5+1=6 (even ✓). B) 5+2=7 (odd ✗).",
+                "apply": "Only n+1 is always even when n is odd."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc2_c3",
+          "name": "Counting Odd and Even Numbers in a Range",
+          "order": 3,
+          "explanation": {
+            "title": "How Many Odd or Even Numbers Are in a Range?",
+            "body": "Imagine you need to count how many seats are 'even-numbered' in a row from seat 1 to seat 30. You could list them all — or use a smart shortcut!\n\nTo count EVEN numbers from 1 to N: divide N by 2 (and round down if odd).\nTo count EVEN numbers between a and b (inclusive): find the first even ≥ a, find the last even ≤ b, then use: count = (last even − first even) ÷ 2 + 1.\n\nFor ODD numbers: use the same formula but with odd boundaries.\n\nExample: How many even numbers from 11 to 30?\nFirst even ≥ 11 is 12. Last even ≤ 30 is 30.\nCount = (30 − 12) ÷ 2 + 1 = 18 ÷ 2 + 1 = 9 + 1 = 10.",
+            "key_idea": "Use the first and last even (or odd) in the range, then apply: count = (last − first) ÷ 2 + 1."
+          },
+          "story_example": {
+            "title": "Counting Chairs at the School Play 🎭",
+            "body": "The school hall has chairs numbered 1 to 50. Boys sit on odd-numbered chairs and girls on even-numbered. How many girls can sit? Even numbers from 1 to 50: first even = 2, last even = 50. Count = (50 − 2) ÷ 2 + 1 = 24 + 1 = 25. So 25 girls can sit!"
+          },
+          "solved_examples": [
+            {
+              "question": "How many even numbers are there from 1 to 20?",
+              "steps": [
+                "First even = 2, Last even = 20",
+                "Count = (20 − 2) ÷ 2 + 1 = 9 + 1"
+              ],
+              "answer": "10"
+            },
+            {
+              "question": "How many odd numbers are there from 11 to 25 (inclusive)?",
+              "steps": [
+                "First odd ≥ 11 is 11, Last odd ≤ 25 is 25",
+                "Count = (25 − 11) ÷ 2 + 1 = 7 + 1"
+              ],
+              "answer": "8"
+            },
+            {
+              "question": "How many even numbers are between 15 and 47 (inclusive)?",
+              "steps": [
+                "First even ≥ 15 is 16, Last even ≤ 47 is 46",
+                "Count = (46 − 16) ÷ 2 + 1 = 15 + 1"
+              ],
+              "answer": "16"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc2_c3_q1",
+              "difficulty": 1,
+              "question": "How many even numbers are there from 1 to 10?",
+              "options": [
+                {"key": "A", "text": "4"},
+                {"key": "B", "text": "5"},
+                {"key": "C", "text": "6"},
+                {"key": "D", "text": "3"}
+              ],
+              "correct_answer": "B",
+              "explanation": "Even numbers: 2, 4, 6, 8, 10 — that's 5 numbers. Or use formula: (10−2)÷2+1 = 5.",
+              "expected_time": 40,
+              "base_score": 10,
+              "hints": [
+                "List all even numbers between 1 and 10: 2, 4, 6, 8, 10. How many are there?",
+                "You can also use the formula: first even = 2, last even = 10. Count = (10−2)÷2+1.",
+                "(10−2)÷2+1 = 8÷2+1 = 4+1 = 5."
+              ],
+              "remedial": {
+                "title": "Counting Even Numbers — List or Formula",
+                "explanation": "You can count by listing (2,4,6,8,10) or use the formula to avoid listing large ranges.",
+                "rule": "Count = (last even − first even) ÷ 2 + 1.",
+                "example": "Evens 1 to 10: (10−2)÷2+1 = 5.",
+                "apply": "List: 2,4,6,8,10 — 5 numbers ✓"
+              }
+            },
+            {
+              "id": "kc2_c3_q2",
+              "difficulty": 2,
+              "question": "How many odd numbers are there between 11 and 25 (inclusive)?",
+              "options": [
+                {"key": "A", "text": "6"},
+                {"key": "B", "text": "7"},
+                {"key": "C", "text": "8"},
+                {"key": "D", "text": "9"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Odd numbers: 11,13,15,17,19,21,23,25 = 8. Formula: (25−11)÷2+1 = 8.",
+              "expected_time": 50,
+              "base_score": 10,
+              "hints": [
+                "Identify the first odd number ≥ 11 and the last odd number ≤ 25.",
+                "First odd = 11, Last odd = 25. Use: count = (last − first) ÷ 2 + 1.",
+                "(25 − 11) ÷ 2 + 1 = 14 ÷ 2 + 1 = 7 + 1 = 8."
+              ],
+              "remedial": {
+                "title": "Counting Odd Numbers in a Range",
+                "explanation": "Find the first and last odd in the range, then apply the counting formula.",
+                "rule": "Count = (last odd − first odd) ÷ 2 + 1.",
+                "example": "Odd numbers 11 to 25: (25−11)÷2+1 = 8.",
+                "apply": "List them to verify: 11,13,15,17,19,21,23,25 — 8 numbers ✓"
+              }
+            },
+            {
+              "id": "kc2_c3_q3",
+              "difficulty": 3,
+              "question": "How many even numbers are there between 15 and 47 (inclusive)?",
+              "options": [
+                {"key": "A", "text": "15"},
+                {"key": "B", "text": "16"},
+                {"key": "C", "text": "17"},
+                {"key": "D", "text": "18"}
+              ],
+              "correct_answer": "B",
+              "explanation": "First even ≥ 15 is 16. Last even ≤ 47 is 46. Count = (46−16)÷2+1 = 15+1 = 16.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "15 is odd, so the first even number ≥ 15 is 16. What is the last even number ≤ 47?",
+                "47 is odd, so the last even ≤ 47 is 46. Now apply the formula with first=16, last=46.",
+                "Count = (46 − 16) ÷ 2 + 1 = 30 ÷ 2 + 1 = 15 + 1 = 16."
+              ],
+              "remedial": {
+                "title": "Counting Evens When Boundaries Are Odd",
+                "explanation": "When the range limits are odd, adjust to the nearest even before using the formula.",
+                "rule": "If a is odd: first even = a+1. If b is odd: last even = b−1. Then count = (last−first)÷2+1.",
+                "example": "15 to 47: first even=16, last even=46. (46−16)÷2+1=16.",
+                "apply": "Never use the odd boundary directly — always adjust to the nearest even first."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc3",
+      "name": "Divisibility Rules",
+      "order": 3,
+      "icon": "➗",
+      "description": "Test divisibility in seconds — no long division needed!",
+      "concepts": [
+        {
+          "id": "kc3_c1",
+          "name": "Divisibility by 2, 5 and 10",
+          "order": 1,
+          "explanation": {
+            "title": "Quick Tests for 2, 5, and 10",
+            "body": "You can tell if a number is divisible by 2, 5, or 10 just by looking at the LAST DIGIT — no calculation needed!\n\n• Divisible by 2: last digit is 0, 2, 4, 6, or 8 (even numbers)\n• Divisible by 5: last digit is 0 or 5\n• Divisible by 10: last digit is 0 (must end in zero)\n\nNotice: If divisible by 10, it is ALSO divisible by 2 and 5. If divisible by 5 AND last digit is 0 → divisible by 10!\n\nThese rules work because of how our number system (base 10) is structured.",
+            "key_idea": "For 2, 5, and 10, only the LAST digit matters."
+          },
+          "story_example": {
+            "title": "Sharing Chocolates 🍫",
+            "body": "Meera has 340 chocolates. Can she share equally among 2 friends? (340 ends in 0 → Yes!) Among 5 friends? (340 ends in 0 → Yes!) Among 10 friends? (340 ends in 0 → Yes!) All three work! But with 345 chocolates: ÷2? No (ends in 5). ÷5? Yes! ÷10? No (doesn't end in 0)."
+          },
+          "solved_examples": [
+            {
+              "question": "Is 7,845 divisible by 5?",
+              "steps": ["Last digit: 5", "5 is in {0, 5} → YES, divisible by 5"],
+              "answer": "Yes"
+            },
+            {
+              "question": "Is 2,136 divisible by 2?",
+              "steps": ["Last digit: 6", "6 is even (in {0,2,4,6,8}) → YES, divisible by 2"],
+              "answer": "Yes"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc3_c1_q1",
+              "difficulty": 1,
+              "question": "Which number is divisible by 10?",
+              "options": [
+                {"key": "A", "text": "1,235"},
+                {"key": "B", "text": "4,560"},
+                {"key": "C", "text": "3,004"},
+                {"key": "D", "text": "7,895"}
+              ],
+              "correct_answer": "B",
+              "explanation": "4,560 ends in 0. Only numbers ending in 0 are divisible by 10.",
+              "expected_time": 35,
+              "base_score": 10,
+              "hints": [
+                "For divisibility by 10, what must the last digit be?",
+                "A number is divisible by 10 ONLY if its last digit is 0.",
+                "Check last digits: A→5, B→0, C→4, D→5. Only B ends in 0."
+              ],
+              "remedial": {
+                "title": "Divisibility Rule for 10",
+                "explanation": "A number is divisible by 10 if and only if it ends in 0.",
+                "rule": "Last digit = 0 → divisible by 10. Any other last digit → NOT divisible by 10.",
+                "example": "1,430 → last digit 0 → divisible by 10 ✓. 1,435 → last digit 5 → NOT ÷10.",
+                "apply": "4,560 ends in 0 → divisible by 10."
+              }
+            },
+            {
+              "id": "kc3_c1_q2",
+              "difficulty": 1,
+              "question": "Which of these is divisible by 5 but NOT by 10?",
+              "options": [
+                {"key": "A", "text": "450"},
+                {"key": "B", "text": "325"},
+                {"key": "C", "text": "200"},
+                {"key": "D", "text": "130"}
+              ],
+              "correct_answer": "B",
+              "explanation": "325 ends in 5 → divisible by 5. It does NOT end in 0 → NOT divisible by 10.",
+              "expected_time": 50,
+              "base_score": 10,
+              "hints": [
+                "For ÷5: last digit must be 0 or 5. For ÷10: last digit must be 0. We want ÷5 but NOT ÷10.",
+                "If a number ends in 0, it is divisible by BOTH 5 AND 10. We want a number ending in 5 only.",
+                "A→0 (÷5 AND ÷10), B→5 (÷5 but NOT ÷10 ✓), C→0 (both), D→0 (both)."
+              ],
+              "remedial": {
+                "title": "Difference Between Divisibility by 5 and 10",
+                "explanation": "Ends in 0 → divisible by both 5 and 10. Ends in 5 → divisible by 5 ONLY.",
+                "rule": "÷5: last digit 0 or 5. ÷10: last digit 0 only.",
+                "example": "325 ends in 5 → ÷5 ✓ but NOT ÷10. 350 ends in 0 → ÷5 ✓ AND ÷10 ✓.",
+                "apply": "325 ends in 5 → divisible by 5 but not 10."
+              }
+            },
+            {
+              "id": "kc3_c1_q3",
+              "difficulty": 2,
+              "question": "A 3-digit number ends in 6. Which divisors does it definitely have?",
+              "options": [
+                {"key": "A", "text": "5 and 10"},
+                {"key": "B", "text": "2 only"},
+                {"key": "C", "text": "2 and 5"},
+                {"key": "D", "text": "2 and 10"}
+              ],
+              "correct_answer": "B",
+              "explanation": "Ends in 6 → even → divisible by 2. Does NOT end in 0 or 5 → NOT divisible by 5 or 10.",
+              "expected_time": 50,
+              "base_score": 10,
+              "hints": [
+                "The number ends in 6. Check each rule: is 6 even? What about divisibility by 5?",
+                "6 is even → divisible by 2 ✓. For ÷5, last digit must be 0 or 5. 6 is neither → NOT ÷5.",
+                "Since not ÷5, also not ÷10. Only definitely divisible by 2."
+              ],
+              "remedial": {
+                "title": "Applying Multiple Divisibility Rules",
+                "explanation": "Check each divisibility rule independently.",
+                "rule": "÷2: last digit 0,2,4,6,8. ÷5: last digit 0,5. ÷10: last digit 0.",
+                "example": "Ends in 6 → ÷2 ✓. 6 not in {0,5} → not ÷5. Not ÷5 → not ÷10.",
+                "apply": "A number ending in 6 is only guaranteed divisible by 2."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc3_c2",
+          "name": "Divisibility by 3 and 9",
+          "order": 2,
+          "explanation": {
+            "title": "The Digit-Sum Trick for 3 and 9",
+            "body": "For 3 and 9, the last digit is NOT enough. You need to add ALL the digits!\n\nRule for 3: Add all digits. If the sum is divisible by 3 → the number is divisible by 3.\nRule for 9: Add all digits. If the sum is divisible by 9 → the number is divisible by 9.\n\nBonus: If divisible by 9, it is ALSO divisible by 3 (because 9 = 3 × 3).\n\nExample: 4,572\nDigit sum = 4 + 5 + 7 + 2 = 18\n18 ÷ 3 = 6 → YES, divisible by 3 ✓\n18 ÷ 9 = 2 → YES, divisible by 9 ✓",
+            "key_idea": "Add ALL digits. If the sum is divisible by 3 (or 9), so is the number."
+          },
+          "story_example": {
+            "title": "The Magic Digit Sum 🔮",
+            "body": "Kabir found the number 729. He added: 7+2+9=18. Then 1+8=9. He noticed that 9 is divisible by both 3 and 9. So 729 must be too! He checked: 729÷3=243 ✓ and 729÷9=81 ✓. The digit sum never lies — even when you add the digits of the digit sum again!"
+          },
+          "solved_examples": [
+            {
+              "question": "Is 4,572 divisible by 3?",
+              "steps": ["Sum digits: 4+5+7+2=18", "Is 18 divisible by 3? 18÷3=6 → YES"],
+              "answer": "Yes"
+            },
+            {
+              "question": "Is 8,145 divisible by 9?",
+              "steps": ["Sum digits: 8+1+4+5=18", "Is 18 divisible by 9? 18÷9=2 → YES"],
+              "answer": "Yes"
+            },
+            {
+              "question": "Is 7,777 divisible by 3?",
+              "steps": ["Sum digits: 7+7+7+7=28", "Is 28 divisible by 3? 28÷3=9 remainder 1 → NO"],
+              "answer": "No"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc3_c2_q1",
+              "difficulty": 1,
+              "question": "Which number is divisible by 9?",
+              "options": [
+                {"key": "A", "text": "4,561"},
+                {"key": "B", "text": "3,456"},
+                {"key": "C", "text": "7,218"},
+                {"key": "D", "text": "2,345"}
+              ],
+              "correct_answer": "B",
+              "explanation": "3+4+5+6=18. 18÷9=2. Divisible by 9 ✓",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "To test divisibility by 9, you do not need to divide the whole number. What shortcut can you use instead?",
+                "Add all the digits of each number. A number is divisible by 9 only if its digit sum is divisible by 9.",
+                "A) 4+5+6+1=16 (not ÷9). B) 3+4+5+6=18, 18÷9=2 ✓. C) 7+2+1+8=18 ✓ — wait, check both B and C!"
+              ],
+              "remedial": {
+                "title": "Divisibility Rule for 9",
+                "explanation": "Add every digit of the number. If the sum is a multiple of 9, the number is divisible by 9.",
+                "rule": "Digit sum divisible by 9 → number divisible by 9. Multiples of 9: 9, 18, 27, 36...",
+                "example": "3,456 → 3+4+5+6=18 → 18÷9=2 ✓ → divisible by 9.",
+                "apply": "If digit sum is large, re-apply: 18 → 1+8=9 ✓."
+              }
+            },
+            {
+              "id": "kc3_c2_q2",
+              "difficulty": 1,
+              "question": "A number has digit sum 24. Is it divisible by 3?",
+              "options": [
+                {"key": "A", "text": "Yes, always"},
+                {"key": "B", "text": "No, never"},
+                {"key": "C", "text": "Only if the last digit is even"},
+                {"key": "D", "text": "Only if the number is even"}
+              ],
+              "correct_answer": "A",
+              "explanation": "24÷3=8. Since the digit sum is divisible by 3, the number itself must be divisible by 3.",
+              "expected_time": 45,
+              "base_score": 10,
+              "hints": [
+                "Recall the divisibility rule for 3. What do you need to check about the digits?",
+                "The rule for 3: if the digit sum is divisible by 3, the number is divisible by 3. Is 24 divisible by 3?",
+                "24 ÷ 3 = 8, no remainder. So YES — any number with digit sum 24 is always divisible by 3."
+              ],
+              "remedial": {
+                "title": "Divisibility Rule for 3",
+                "explanation": "For divisibility by 3, only the digit SUM matters — not the last digit, not the size of the number.",
+                "rule": "Digit sum divisible by 3 → number divisible by 3.",
+                "example": "246 → 2+4+6=12 → 12÷3=4 ✓. 247 → 2+4+7=13 → not ÷3.",
+                "apply": "Digit sum = 24. 24÷3=8 exactly. → Always divisible by 3."
+              }
+            },
+            {
+              "id": "kc3_c2_q3",
+              "difficulty": 2,
+              "question": "What is the smallest 3-digit number divisible by 9?",
+              "options": [
+                {"key": "A", "text": "108"},
+                {"key": "B", "text": "100"},
+                {"key": "C", "text": "117"},
+                {"key": "D", "text": "99"}
+              ],
+              "correct_answer": "A",
+              "explanation": "108: 1+0+8=9. 9÷9=1 ✓. 99 is 2-digit. 100: 1+0+0=1 (fails). 108 is the smallest 3-digit multiple of 9.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "The smallest 3-digit number is 100. Is 100 divisible by 9? Apply the digit-sum rule.",
+                "100: 1+0+0=1. 1 is not divisible by 9. The next multiple of 9 after 99 is 9×12=108. Check 108.",
+                "108: 1+0+8=9. 9÷9=1 ✓. 108 is divisible by 9 and is a 3-digit number."
+              ],
+              "remedial": {
+                "title": "Finding the Smallest Number in a Range Divisible by a Divisor",
+                "explanation": "Method 1: Divide 100 by 9 and round up. Method 2: Check digit sums starting from 100.",
+                "rule": "100÷9=11.1... Round up to 12. 12×9=108. Check: 1+0+8=9 ✓.",
+                "example": "99 has only 2 digits. 100: fails digit test. 108: passes.",
+                "apply": "108 is the smallest 3-digit number divisible by 9."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc3_c3",
+          "name": "Combined Divisibility Tests",
+          "order": 3,
+          "explanation": {
+            "title": "Testing for Multiple Divisors at Once",
+            "body": "Sometimes you need to check if a number is divisible by MORE than one number. Apply each rule SEPARATELY.\n\nSpecial rule for 6: A number is divisible by 6 if it is divisible by BOTH 2 AND 3.\n(Because 6 = 2 × 3, and 2 and 3 share no common factors.)\n\nStrategy:\n1. List all divisors you need to test\n2. Apply each rule independently\n3. A number passes ALL tests → it is divisible by all those numbers\n\nExample: Is 4,320 divisible by 2, 3, 5, 9, and 10?\n• By 2: ends in 0 ✓\n• By 3: 4+3+2+0=9, 9÷3=3 ✓\n• By 5: ends in 0 ✓\n• By 9: digit sum 9, 9÷9=1 ✓\n• By 10: ends in 0 ✓",
+            "key_idea": "Apply each divisibility rule independently. Divisible by 6 = divisible by both 2 AND 3."
+          },
+          "story_example": {
+            "title": "Planning a School Event 🏫",
+            "body": "The school has 450 students. Can they be split into groups of 2? (450 ends in 0 → Yes!) Groups of 3? (4+5+0=9, ÷3 → Yes!) Groups of 5? (ends in 0 → Yes!) Groups of 9? (digit sum 9 → Yes!) Groups of 6? (÷2 ✓ AND ÷3 ✓ → Yes!). 450 is a very flexible number for grouping!"
+          },
+          "solved_examples": [
+            {
+              "question": "Is 7,236 divisible by 6?",
+              "steps": [
+                "Check ÷2: last digit 6 (even) → ✓",
+                "Check ÷3: 7+2+3+6=18, 18÷3=6 → ✓",
+                "Divisible by both 2 and 3 → divisible by 6 ✓"
+              ],
+              "answer": "Yes"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc3_c3_q1",
+              "difficulty": 2,
+              "question": "Which of these is divisible by BOTH 5 and 3?",
+              "options": [
+                {"key": "A", "text": "625"},
+                {"key": "B", "text": "450"},
+                {"key": "C", "text": "315"},
+                {"key": "D", "text": "Both B and C"}
+              ],
+              "correct_answer": "D",
+              "explanation": "450: last digit 0 (÷5 ✓), digit sum 9 (÷3 ✓). 315: last digit 5 (÷5 ✓), digit sum 9 (÷3 ✓).",
+              "expected_time": 65,
+              "base_score": 10,
+              "hints": [
+                "To be divisible by both 5 AND 3, a number must pass two separate tests. What are those two tests?",
+                "Test for 5: last digit must be 0 or 5. Test for 3: digit sum must be divisible by 3. Apply both to each option.",
+                "A) 625: last digit 5 ✓ (÷5), but 6+2+5=13, 13÷3 fails. B) 450 and C) 315 both pass both tests."
+              ],
+              "remedial": {
+                "title": "Testing Divisibility by Multiple Numbers",
+                "explanation": "Apply each divisibility rule independently. A number must pass ALL rules.",
+                "rule": "÷5: last digit 0 or 5. ÷3: digit sum ÷ 3. Both must pass.",
+                "example": "450: last digit 0 (÷5 ✓), 4+5+0=9 (÷3 ✓). 315: last digit 5 (÷5 ✓), 3+1+5=9 (÷3 ✓).",
+                "apply": "Both B and C pass both tests."
+              }
+            },
+            {
+              "id": "kc3_c3_q2",
+              "difficulty": 2,
+              "question": "Is 7,236 divisible by 6?",
+              "options": [
+                {"key": "A", "text": "Yes"},
+                {"key": "B", "text": "No"},
+                {"key": "C", "text": "Cannot be determined"},
+                {"key": "D", "text": "Only if it ends in 6"}
+              ],
+              "correct_answer": "A",
+              "explanation": "÷2: last digit 6 (even) ✓. ÷3: 7+2+3+6=18, 18÷3=6 ✓. Both pass → divisible by 6.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "Divisible by 6 means divisible by both 2 AND 3. Check each rule separately.",
+                "Is 7,236 divisible by 2? Check the last digit.",
+                "Last digit 6 → ÷2 ✓. Digit sum 7+2+3+6=18, 18÷3=6 → ÷3 ✓. Both pass → ÷6 ✓."
+              ],
+              "remedial": {
+                "title": "Divisibility by 6",
+                "explanation": "A number is divisible by 6 if and only if it is divisible by BOTH 2 and 3.",
+                "rule": "Step 1: Check ÷2 (last digit even). Step 2: Check ÷3 (digit sum ÷ 3). If both → ÷6.",
+                "example": "7,236: last digit 6 ✓, digit sum 18 ✓ → divisible by 6.",
+                "apply": "Never check ÷6 directly. Always split into ÷2 and ÷3."
+              }
+            },
+            {
+              "id": "kc3_c3_q3",
+              "difficulty": 3,
+              "question": "Which of 2, 3, 5, 9, 10 divide 4,320?",
+              "options": [
+                {"key": "A", "text": "Only 2, 3, 5"},
+                {"key": "B", "text": "All five: 2, 3, 5, 9, 10"},
+                {"key": "C", "text": "Only 2, 5, 10"},
+                {"key": "D", "text": "Only 2, 3, 9"}
+              ],
+              "correct_answer": "B",
+              "explanation": "4,320: ÷2 (ends 0) ✓, ÷3 (sum=9) ✓, ÷5 (ends 0) ✓, ÷9 (sum=9) ✓, ÷10 (ends 0) ✓. All five!",
+              "expected_time": 70,
+              "base_score": 10,
+              "hints": [
+                "Apply each divisibility rule to 4,320 one at a time.",
+                "Last digit is 0 → ÷2 ✓, ÷5 ✓, ÷10 ✓. Now check ÷3 and ÷9: add the digits.",
+                "4+3+2+0=9. 9÷3=3 ✓ and 9÷9=1 ✓. All five divisors work!"
+              ],
+              "remedial": {
+                "title": "Testing All Divisors Systematically",
+                "explanation": "Work through each divisor's rule methodically. Don't skip any.",
+                "rule": "÷2: last digit 0 ✓. ÷3: digit sum 9 ✓. ÷5: last digit 0 ✓. ÷9: digit sum 9 ✓. ÷10: last digit 0 ✓.",
+                "example": "4,320 passes ALL five tests.",
+                "apply": "Always test each divisor separately and check them off."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc4",
+      "name": "Number Sequences",
+      "order": 4,
+      "icon": "📈",
+      "description": "Arithmetic, geometric, triangular and square number series",
+      "concepts": [
+        {
+          "id": "kc4_c1",
+          "name": "Arithmetic Sequences",
+          "order": 1,
+          "explanation": {
+            "title": "What is an Arithmetic Sequence?",
+            "body": "An arithmetic sequence is a list of numbers where you ADD the SAME number (called the common difference, d) each time.\n\nThe formula for ANY term:\n  nth term = a + (n − 1) × d\nwhere a = first term, d = common difference, n = position.\n\nSum of n terms:\n  Sum = n/2 × (2a + (n−1)d)\n\nExample: 2, 5, 8, 11, 14 → a=2, d=3\n  10th term = 2 + (10−1) × 3 = 2 + 27 = 29\n\nThe formula saves you from listing every single term!",
+            "key_idea": "nth term = a + (n−1) × d. Learn this formula and you can find ANY term instantly."
+          },
+          "story_example": {
+            "title": "Seats in a Cinema 🎬",
+            "body": "A cinema has 10 seats in row 1, 14 in row 2, 18 in row 3... Each row has 4 more seats. How many seats in row 15? a=10, d=4, n=15. Answer = 10 + (15−1)×4 = 10 + 56 = 66 seats. No need to list all 15 rows!"
+          },
+          "solved_examples": [
+            {
+              "question": "Find the 10th term of: 3, 7, 11, 15, ...",
+              "steps": [
+                "Identify: a=3, d=7−3=4",
+                "nth term = 3 + (10−1) × 4 = 3 + 36 = 39"
+              ],
+              "answer": "39"
+            },
+            {
+              "question": "The 5th term of an arithmetic sequence is 22 and the common difference is 3. What is the first term?",
+              "steps": [
+                "nth term = a + (n−1) × d",
+                "22 = a + (5−1) × 3 = a + 12",
+                "a = 22 − 12 = 10"
+              ],
+              "answer": "First term = 10"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc4_c1_q1",
+              "difficulty": 1,
+              "question": "What is the 8th term of the arithmetic sequence: 6, 10, 14, 18, ...?",
+              "options": [
+                {"key": "A", "text": "34"},
+                {"key": "B", "text": "38"},
+                {"key": "C", "text": "36"},
+                {"key": "D", "text": "40"}
+              ],
+              "correct_answer": "A",
+              "explanation": "a=6, d=4. 8th term = 6 + (8−1)×4 = 6 + 28 = 34.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "This is an arithmetic sequence. What are the two values you need to use the nth-term formula?",
+                "Identify: a (first term) = 6, d (common difference) = 10−6 = 4. The formula is: nth term = a + (n−1) × d. Substitute n=8.",
+                "8th term = 6 + (8−1) × 4 = 6 + 7 × 4 = 6 + 28 = 34."
+              ],
+              "remedial": {
+                "title": "Arithmetic Sequence — nth Term Formula",
+                "explanation": "The formula nth term = a + (n−1) × d is the most important formula for arithmetic sequences.",
+                "rule": "a = first term, d = common difference = (any term) − (previous term), n = position.",
+                "example": "6, 10, 14, 18 → a=6, d=4. 8th term = 6 + 7×4 = 34.",
+                "apply": "Always find a and d first, then substitute into the formula."
+              }
+            },
+            {
+              "id": "kc4_c1_q2",
+              "difficulty": 2,
+              "question": "In an arithmetic sequence, the first term is 5 and the 6th term is 30. What is the common difference?",
+              "options": [
+                {"key": "A", "text": "4"},
+                {"key": "B", "text": "5"},
+                {"key": "C", "text": "6"},
+                {"key": "D", "text": "7"}
+              ],
+              "correct_answer": "B",
+              "explanation": "6th term = a + 5d → 30 = 5 + 5d → 5d = 25 → d = 5.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "Use the formula: nth term = a + (n−1) × d. You know a=5 and the 6th term=30.",
+                "30 = 5 + (6−1) × d → 30 = 5 + 5d → 5d = 25.",
+                "5d = 25 → d = 25 ÷ 5 = 5."
+              ],
+              "remedial": {
+                "title": "Finding the Common Difference",
+                "explanation": "If you know two terms, plug them into the formula and solve for d.",
+                "rule": "nth term = a + (n−1)d. Rearrange: d = (nth term − a) ÷ (n−1).",
+                "example": "a=5, 6th term=30. d = (30−5)÷(6−1) = 25÷5 = 5.",
+                "apply": "Sequence: 5, 10, 15, 20, 25, 30. Common difference = 5."
+              }
+            },
+            {
+              "id": "kc4_c1_q3",
+              "difficulty": 3,
+              "question": "What is the sum of the first 10 terms of the sequence: 1, 4, 7, 10, ...?",
+              "options": [
+                {"key": "A", "text": "145"},
+                {"key": "B", "text": "155"},
+                {"key": "C", "text": "135"},
+                {"key": "D", "text": "165"}
+              ],
+              "correct_answer": "A",
+              "explanation": "a=1, d=3. Sum = 10/2 × (2×1 + 9×3) = 5 × (2+27) = 5 × 29 = 145.",
+              "expected_time": 70,
+              "base_score": 10,
+              "hints": [
+                "Use the sum formula: Sum = n/2 × (2a + (n−1)d). What are a, d, and n here?",
+                "a=1, d=3, n=10. Substitute: Sum = 10/2 × (2×1 + (10−1)×3) = 5 × (2 + 27).",
+                "5 × 29 = 145."
+              ],
+              "remedial": {
+                "title": "Sum of Arithmetic Sequence",
+                "explanation": "Instead of adding all 10 terms manually, use the sum formula.",
+                "rule": "Sum = n/2 × (2a + (n−1)d) or Sum = n/2 × (first term + last term).",
+                "example": "1, 4, 7...28 (10 terms). Sum = 10/2 × (1+28) = 5×29 = 145.",
+                "apply": "Last term = 1+(10−1)×3 = 28. Sum = 5 × (1+28) = 145."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc4_c2",
+          "name": "Geometric Sequences",
+          "order": 2,
+          "explanation": {
+            "title": "What is a Geometric Sequence?",
+            "body": "A geometric sequence multiplies each term by the SAME number (the common ratio, r) each time.\n\nFormula for any term:\n  nth term = a × r^(n−1)\nwhere a = first term, r = common ratio.\n\nExample: 3, 6, 12, 24, 48 → a=3, r=2\n  6th term = 3 × 2^5 = 3 × 32 = 96\n\nGeometric sequences grow MUCH faster than arithmetic ones — doubling, tripling, or more each step!",
+            "key_idea": "nth term = a × r^(n−1). Divide consecutive terms to find the ratio r."
+          },
+          "story_example": {
+            "title": "The Rice and Chessboard Story ♟️",
+            "body": "A king placed 1 grain of rice on square 1 of a chessboard, 2 on square 2, 4 on square 3, 8 on square 4... doubling each time. On square 10: 2^9 = 512 grains. On square 20: over 500,000 grains! On square 64: more rice than exists on Earth! This is the power of a geometric sequence with r=2."
+          },
+          "solved_examples": [
+            {
+              "question": "In geometric sequence 5, 15, 45, 135... what is the 6th term?",
+              "steps": [
+                "a=5, r=15÷5=3",
+                "6th term = 5 × 3^(6−1) = 5 × 3^5 = 5 × 243 = 1,215"
+              ],
+              "answer": "1,215"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc4_c2_q1",
+              "difficulty": 2,
+              "question": "Which term of the sequence 5, 10, 20, 40, ... equals 320?",
+              "options": [
+                {"key": "A", "text": "6th"},
+                {"key": "B", "text": "7th"},
+                {"key": "C", "text": "8th"},
+                {"key": "D", "text": "5th"}
+              ],
+              "correct_answer": "B",
+              "explanation": "a=5, r=2. nth term=5×2^(n−1)=320 → 2^(n−1)=64=2^6 → n−1=6 → n=7.",
+              "expected_time": 65,
+              "base_score": 10,
+              "hints": [
+                "This is a geometric sequence (each term is doubled). Write the formula for the nth term.",
+                "nth term = a × r^(n−1) = 5 × 2^(n−1). Set this equal to 320: 5 × 2^(n−1) = 320. Divide both sides by 5.",
+                "2^(n−1) = 64. Since 2^6 = 64, we get n−1=6, so n=7."
+              ],
+              "remedial": {
+                "title": "Geometric Sequence — Finding a Term's Position",
+                "explanation": "Set the nth term formula equal to the target value and solve for n.",
+                "rule": "nth term = a × r^(n−1) = target → solve for n by working out the power.",
+                "example": "5 × 2^(n−1) = 320 → 2^(n−1) = 64 → n−1 = 6 → n = 7. Verify: 5,10,20,40,80,160,320 ✓.",
+                "apply": "Always divide both sides by a first to isolate the power term."
+              }
+            },
+            {
+              "id": "kc4_c2_q2",
+              "difficulty": 2,
+              "question": "What is the 5th term of the geometric sequence: 2, 6, 18, 54, ...?",
+              "options": [
+                {"key": "A", "text": "108"},
+                {"key": "B", "text": "162"},
+                {"key": "C", "text": "216"},
+                {"key": "D", "text": "144"}
+              ],
+              "correct_answer": "B",
+              "explanation": "a=2, r=3. 5th term = 2 × 3^4 = 2 × 81 = 162.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "Find the common ratio r by dividing: 6÷2=?, 18÷6=?",
+                "r=3. Use the formula: 5th term = a × r^(5−1) = 2 × 3^4.",
+                "3^4 = 81. 2 × 81 = 162."
+              ],
+              "remedial": {
+                "title": "Finding a Specific Term in a Geometric Sequence",
+                "explanation": "Find r by dividing any term by the previous one. Then apply the formula.",
+                "rule": "nth term = a × r^(n−1). First find r = (any term) ÷ (previous term).",
+                "example": "2, 6, 18, 54: r=3. 5th term = 2×3^4 = 2×81 = 162.",
+                "apply": "List if needed: 2→6→18→54→162."
+              }
+            },
+            {
+              "id": "kc4_c2_q3",
+              "difficulty": 3,
+              "question": "A geometric sequence has first term 4 and common ratio 3. What is the difference between the 4th and 3rd terms?",
+              "options": [
+                {"key": "A", "text": "72"},
+                {"key": "B", "text": "36"},
+                {"key": "C", "text": "108"},
+                {"key": "D", "text": "54"}
+              ],
+              "correct_answer": "A",
+              "explanation": "3rd term = 4×3² = 36. 4th term = 4×3³ = 108. Difference = 108 − 36 = 72.",
+              "expected_time": 65,
+              "base_score": 10,
+              "hints": [
+                "First write out the sequence: 4, 12, 36, 108. What are the 3rd and 4th terms?",
+                "3rd term = 36, 4th term = 108. Now find the difference.",
+                "108 − 36 = 72."
+              ],
+              "remedial": {
+                "title": "Comparing Terms in a Geometric Sequence",
+                "explanation": "Calculate each term using the formula, then subtract.",
+                "rule": "3rd term = a×r² = 4×9=36. 4th term = a×r³ = 4×27=108. Difference = 72.",
+                "example": "Sequence: 4, 12, 36, 108. 108−36=72.",
+                "apply": "Find both terms first, then subtract."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc4_c3",
+          "name": "Triangular, Square and Oblong Numbers",
+          "order": 3,
+          "explanation": {
+            "title": "Special Number Sequences",
+            "body": "Some sequences have beautiful geometric interpretations!\n\n🔺 TRIANGULAR NUMBERS: 1, 3, 6, 10, 15, 21...\n• Each term = previous term + next integer\n• Formula: n(n+1)/2\n• Differences: +1, +2, +3, +4...\n\n🟦 SQUARE NUMBERS: 1, 4, 9, 16, 25, 36...\n• Each term = n²\n• Differences: +3, +5, +7, +9... (odd numbers)\n\n📦 OBLONG NUMBERS: 2, 6, 12, 20, 30, 42...\n• Each term = n×(n+1)\n• Differences: +4, +6, +8, +10... (even numbers)\n• Note: Oblong = 2 × Triangular number!",
+            "key_idea": "Triangular: n(n+1)/2. Square: n². Oblong: n(n+1) = 2 × triangular."
+          },
+          "story_example": {
+            "title": "Building with Dots 🔵",
+            "body": "Arranging dots in triangle shapes: 1 dot, 3 dots, 6 dots, 10 dots... Each new triangle adds a new row. Adding 2 triangles together always makes an oblong (rectangle)! That's why oblong numbers are exactly double the triangular numbers."
+          },
+          "solved_examples": [
+            {
+              "question": "Find the next term in: 2, 6, 12, 20, ___",
+              "steps": [
+                "Differences: +4, +6, +8 → next difference = +10",
+                "OR: 1×2, 2×3, 3×4, 4×5, 5×6 = 30",
+                "Answer: 30 (oblong numbers: n×(n+1))"
+              ],
+              "answer": "30"
+            },
+            {
+              "question": "The 5th triangular number is 15. What is the 6th?",
+              "steps": [
+                "Triangular numbers: add the next integer",
+                "6th = 15 + 6 = 21",
+                "Verify: 6×7÷2 = 42÷2 = 21 ✓"
+              ],
+              "answer": "21"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc4_c3_q1",
+              "difficulty": 1,
+              "question": "Find the next term in: 2, 6, 12, 20, 30, ___",
+              "options": [
+                {"key": "A", "text": "40"},
+                {"key": "B", "text": "42"},
+                {"key": "C", "text": "44"},
+                {"key": "D", "text": "45"}
+              ],
+              "correct_answer": "B",
+              "explanation": "Oblong numbers n(n+1). Next: 6×7=42.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "Find the differences: 6−2=4, 12−6=6, 20−12=8, 30−20=10. What pattern do the differences follow?",
+                "Differences are 4, 6, 8, 10 — they increase by 2. So the next difference is 12. Or try expressing each term as a product.",
+                "2=1×2, 6=2×3, 12=3×4, 20=4×5, 30=5×6. Pattern is n×(n+1). Next: 6×7 = 42."
+              ],
+              "remedial": {
+                "title": "Oblong Numbers n × (n + 1)",
+                "explanation": "Oblong numbers are products of two consecutive integers: 1×2, 2×3, 3×4...",
+                "rule": "nth oblong number = n × (n+1). The 6th is 6×7=42.",
+                "example": "Sequence: 2, 6, 12, 20, 30, 42. Differences: +4, +6, +8, +10, +12.",
+                "apply": "30 = 5×6. Next = 6×7 = 42."
+              }
+            },
+            {
+              "id": "kc4_c3_q2",
+              "difficulty": 2,
+              "question": "The 5th triangular number is 15. What is the 6th triangular number?",
+              "options": [
+                {"key": "A", "text": "18"},
+                {"key": "B", "text": "20"},
+                {"key": "C", "text": "21"},
+                {"key": "D", "text": "22"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Triangular numbers: add the next integer. 15 + 6 = 21. Formula: 6×7/2 = 21 ✓",
+              "expected_time": 50,
+              "base_score": 10,
+              "hints": [
+                "Triangular numbers are formed by adding consecutive integers. What integer was added to get the 5th triangular number (15)?",
+                "The 5th triangular number = 1+2+3+4+5 = 15. To get the 6th, you add the next integer: 15 + 6.",
+                "15 + 6 = 21. Confirm with formula: n(n+1)/2 = 6×7/2 = 21 ✓"
+              ],
+              "remedial": {
+                "title": "Triangular Numbers",
+                "explanation": "Each new triangular number adds the next whole number to the previous term.",
+                "rule": "nth triangular number = n(n+1) ÷ 2. To get the next: add the next integer.",
+                "example": "1, 3, 6, 10, 15, 21... Differences: +1, +2, +3, +4, +5, +6.",
+                "apply": "6th = 5th + 6 = 15 + 6 = 21. Formula: 6×7÷2 = 21."
+              }
+            },
+            {
+              "id": "kc4_c3_q3",
+              "difficulty": 2,
+              "question": "Which of these is NOT a perfect square?",
+              "options": [
+                {"key": "A", "text": "144"},
+                {"key": "B", "text": "169"},
+                {"key": "C", "text": "196"},
+                {"key": "D", "text": "200"}
+              ],
+              "correct_answer": "D",
+              "explanation": "√144=12, √169=13, √196=14. √200 ≈ 14.14 — not a whole number. 200 is not a perfect square.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "A perfect square is a number whose square root is a whole number. Try taking the square root of each option.",
+                "√144=12 ✓, √169=13 ✓, √196=14 ✓. Now try √200. Is it a whole number?",
+                "√200 ≈ 14.14 — not a whole number. 200 is between 14²=196 and 15²=225."
+              ],
+              "remedial": {
+                "title": "Perfect Squares",
+                "explanation": "A perfect square equals n² for some whole number n. Its square root is a whole number.",
+                "rule": "Common perfect squares: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225...",
+                "example": "√200 ≈ 14.14. Not whole → 200 is NOT a perfect square. 200 lies between 196(14²) and 225(15²).",
+                "apply": "Memorise squares of 1–15 to quickly identify perfect squares."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kc5",
+      "name": "Logical Number Puzzles",
+      "order": 5,
+      "icon": "🧩",
+      "description": "Use clues to find mystery numbers — constraint-based reasoning!",
+      "concepts": [
+        {
+          "id": "kc5_c1",
+          "name": "Constraint-Based Elimination",
+          "order": 1,
+          "explanation": {
+            "title": "Solving Number Puzzles Step by Step",
+            "body": "A number puzzle gives you CLUES (constraints) and asks you to find the mystery number. Strategy:\n\n1. READ all clues first\n2. Start with the MOST restrictive clue (the one that eliminates the most options)\n3. Apply clues ONE BY ONE, crossing out numbers that fail\n4. The number that survives ALL clues is the answer\n5. ALWAYS verify your answer against every single clue\n\nCommon constraint types:\n• Range: 'I am between 30 and 50'\n• Divisibility: 'I am divisible by 4'\n• Digit properties: 'My digits sum to 11'\n• Odd/Even: 'I am odd'\n• Comparison: 'I am greater than 50'",
+            "key_idea": "List candidates → eliminate with each clue → verify. Never guess — be systematic!"
+          },
+          "story_example": {
+            "title": "Detective Number 🕵️",
+            "body": "Detective Nisha has a mystery: 'I am a 2-digit number. I am between 30 and 50. I am divisible by 7. My digit sum is even.' Suspects between 30–50 divisible by 7: 35, 42, 49. Digit sum even? 35→8✓, 42→6✓, 49→13✗. Two suspects remain! She needs one more clue to catch the culprit."
+          },
+          "solved_examples": [
+            {
+              "question": "I am a 2-digit number. My digits sum to 9. I am even. I am less than 50. What could I be?",
+              "steps": [
+                "2-digit with digit sum 9: 18, 27, 36, 45, 54, 63, 72, 81, 90",
+                "Even: 18, 36, 54, 72, 90",
+                "Less than 50: 18, 36",
+                "Both 18 and 36 satisfy all clues"
+              ],
+              "answer": "18 or 36"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc5_c1_q1",
+              "difficulty": 2,
+              "question": "I am a 2-digit number. I am divisible by both 3 and 5. I am less than 50. What could I be?",
+              "options": [
+                {"key": "A", "text": "15"},
+                {"key": "B", "text": "30"},
+                {"key": "C", "text": "45"},
+                {"key": "D", "text": "All of A, B and C"}
+              ],
+              "correct_answer": "D",
+              "explanation": "Divisible by 3 and 5 means divisible by 15. 2-digit multiples of 15 less than 50: 15, 30, 45. All qualify.",
+              "expected_time": 65,
+              "base_score": 10,
+              "hints": [
+                "A number divisible by both 3 and 5 must be divisible by what larger number? List its 2-digit multiples.",
+                "Divisible by 3 AND 5 → divisible by 15. 2-digit multiples of 15: 15, 30, 45, 60, 75, 90. Which are less than 50?",
+                "15<50 ✓, 30<50 ✓, 45<50 ✓, 60>50 ✗. All three (15, 30, 45) satisfy every clue, so answer is D."
+              ],
+              "remedial": {
+                "title": "Systematic Elimination with Multiple Constraints",
+                "explanation": "Apply each clue one at a time. Eliminate numbers that fail any clue. Check ALL clues for remaining numbers.",
+                "rule": "Step 1: Most restrictive clue = divisible by 15. Step 2: List 2-digit multiples: 15,30,45,60,75,90. Step 3: Apply <50.",
+                "example": "15✓, 30✓, 45✓. All three pass. Answer = D (All of A, B, C).",
+                "apply": "Never stop at first match. Check if multiple answers qualify."
+              }
+            },
+            {
+              "id": "kc5_c1_q2",
+              "difficulty": 3,
+              "question": "A number leaves remainder 1 when divided by 2, and remainder 1 when divided by 3. The number is between 10 and 20. What is the smallest such number?",
+              "options": [
+                {"key": "A", "text": "13"},
+                {"key": "B", "text": "17"},
+                {"key": "C", "text": "11"},
+                {"key": "D", "text": "19"}
+              ],
+              "correct_answer": "A",
+              "explanation": "Remainder 1 ÷ 2 → odd: 11,13,15,17,19. Remainder 1 ÷ 3: 13(✓), 19(✓). Smallest is 13.",
+              "expected_time": 70,
+              "base_score": 10,
+              "hints": [
+                "Remainder 1 when divided by 2 means the number is odd. List all odd numbers between 10 and 20.",
+                "Odd numbers between 10 and 20: 11, 13, 15, 17, 19. Now check which leave remainder 1 when divided by 3.",
+                "11÷3=3r2 ✗. 13÷3=4r1 ✓. 15÷3=5r0 ✗. 17÷3=5r2 ✗. 19÷3=6r1 ✓. Smallest is 13."
+              ],
+              "remedial": {
+                "title": "Remainder Constraints",
+                "explanation": "Remainder 1 when divided by 2 means ODD. Remainder 1 when divided by 3 means of the form 3k+1.",
+                "rule": "List odd numbers in range. For each, check if (number−1) is divisible by 3.",
+                "example": "13−1=12, 12÷3=4 ✓. 19−1=18, 18÷3=6 ✓. Both qualify. Smallest = 13.",
+                "apply": "Odd numbers in 10-20: 11,13,15,17,19. Only 13 and 19 pass the second test."
+              }
+            },
+            {
+              "id": "kc5_c1_q3",
+              "difficulty": 3,
+              "question": "I am a 3-digit palindrome (reads same forwards and backwards). My digit sum is 15. My first digit is 6. What am I?",
+              "options": [
+                {"key": "A", "text": "636"},
+                {"key": "B", "text": "696"},
+                {"key": "C", "text": "666"},
+                {"key": "D", "text": "663"}
+              ],
+              "correct_answer": "A",
+              "explanation": "3-digit palindrome starting with 6: form is 6X6. Digit sum: 6+X+6=15 → X=3. Number: 636.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "A 3-digit palindrome has the form ABA (first and last digit are the same). If the first digit is 6, what is the last digit?",
+                "The form is 6X6. Now use the digit sum: 6 + X + 6 = 15. Solve for X.",
+                "6 + X + 6 = 15 → 12 + X = 15 → X = 3. The number is 636."
+              ],
+              "remedial": {
+                "title": "Palindrome Number Puzzles",
+                "explanation": "A palindrome reads the same forwards and backwards. A 3-digit palindrome has the form ABA.",
+                "rule": "First digit = 6 → form is 6B6. Use digit sum: 6+B+6=15 → B=3.",
+                "example": "636: reads same backwards ✓, digit sum 6+3+6=15 ✓, first digit 6 ✓.",
+                "apply": "Always set up the form first (6X6), then use the remaining clue to find X."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc5_c2",
+          "name": "Sum and Product Puzzles",
+          "order": 2,
+          "explanation": {
+            "title": "Finding Numbers from Sum and Product",
+            "body": "These puzzles give you two facts about a pair of numbers and ask you to find them:\n  • Their SUM (when added)\n  • Their PRODUCT (when multiplied)\n\nSolving Strategy:\n1. List all pairs that add up to the given sum\n2. Check which pair also gives the required product\n3. Verify both conditions\n\nAlgebraic shortcut: If sum=S and product=P, then the numbers are roots of:\n  x² − Sx + P = 0\n\nExample: Sum=10, Product=21\nPairs: (1,9), (2,8), (3,7)... → 3×7=21 ✓ → Numbers are 3 and 7.",
+            "key_idea": "List pairs with the right sum, then check which pair has the right product."
+          },
+          "story_example": {
+            "title": "Two Mystery Ages 🎂",
+            "body": "Anu says: 'The sum of my age and my brother's age is 20, and the product of our ages is 96.' Can you find their ages? Pairs summing to 20: (1,19), (2,18)... (8,12)... 8×12=96 ✓! Anu is 8 and her brother is 12 (or vice versa)."
+          },
+          "solved_examples": [
+            {
+              "question": "The sum of two numbers is 20 and their product is 96. Find them.",
+              "steps": [
+                "Pairs summing to 20: ..., (6,14), (7,13), (8,12), (9,11), ...",
+                "Check products: 8×12=96 ✓",
+                "Verify: 8+12=20 ✓ and 8×12=96 ✓"
+              ],
+              "answer": "8 and 12"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc5_c2_q1",
+              "difficulty": 2,
+              "question": "The sum of two numbers is 20 and their product is 96. What are the two numbers?",
+              "options": [
+                {"key": "A", "text": "8 and 12"},
+                {"key": "B", "text": "6 and 14"},
+                {"key": "C", "text": "4 and 16"},
+                {"key": "D", "text": "10 and 10"}
+              ],
+              "correct_answer": "A",
+              "explanation": "8+12=20 ✓ and 8×12=96 ✓. Check others: 6×14=84 ✗, 4×16=64 ✗, 10×10=100 ✗.",
+              "expected_time": 60,
+              "base_score": 10,
+              "hints": [
+                "You have two clues: sum=20, product=96. Try each option and check the SUM first.",
+                "All options sum to 20. Now check the product for each: A) 8×12=?, B) 6×14=?, C) 4×16=?, D) 10×10=?",
+                "A) 8×12=96 ✓. B) 6×14=84 ✗. C) 4×16=64 ✗. D) 10×10=100 ✗. Answer: A."
+              ],
+              "remedial": {
+                "title": "Sum and Product Puzzles",
+                "explanation": "List all pairs that add to the sum, then check which pair multiplies to the product.",
+                "rule": "Pairs summing to 20: (1,19), (2,18)...(8,12)...(10,10). Check: 8×12=96 ✓.",
+                "example": "8+12=20 and 8×12=96. Algebraic: x²−20x+96=0 → (x−8)(x−12)=0.",
+                "apply": "Always verify both sum AND product for your final answer."
+              }
+            },
+            {
+              "id": "kc5_c2_q2",
+              "difficulty": 2,
+              "question": "Two numbers have a sum of 13 and a product of 42. What are they?",
+              "options": [
+                {"key": "A", "text": "6 and 7"},
+                {"key": "B", "text": "5 and 8"},
+                {"key": "C", "text": "4 and 9"},
+                {"key": "D", "text": "3 and 10"}
+              ],
+              "correct_answer": "A",
+              "explanation": "6+7=13 ✓ and 6×7=42 ✓.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "List pairs that add to 13: (1,12), (2,11), (3,10), (4,9), (5,8), (6,7).",
+                "Now check which pair multiplies to 42.",
+                "6×7=42 ✓. 6+7=13 ✓. Answer is 6 and 7."
+              ],
+              "remedial": {
+                "title": "Finding a Pair from Sum and Product",
+                "explanation": "Systematically test pairs that sum to 13 until you find the one that also has product 42.",
+                "rule": "Pairs: check 1×12=12✗, 2×11=22✗, 3×10=30✗, 4×9=36✗, 5×8=40✗, 6×7=42✓.",
+                "example": "6+7=13 and 6×7=42.",
+                "apply": "Always start with pairs closest to the middle — they are more likely to have large products."
+              }
+            },
+            {
+              "id": "kc5_c2_q3",
+              "difficulty": 3,
+              "question": "A number is multiplied by 3 and then 7 is added. The result is 34. What is the original number?",
+              "options": [
+                {"key": "A", "text": "7"},
+                {"key": "B", "text": "8"},
+                {"key": "C", "text": "9"},
+                {"key": "D", "text": "11"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Let number be n. 3n + 7 = 34 → 3n = 27 → n = 9. Check: 3×9+7=34 ✓",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "Work backwards from the result. The last operation was '+7'. What do you do to reverse it?",
+                "Reverse '+7' by subtracting 7: 34 − 7 = 27. Now reverse '×3' by dividing: 27 ÷ 3 = ?",
+                "27 ÷ 3 = 9. The original number is 9. Verify: 9 × 3 = 27, then 27 + 7 = 34 ✓."
+              ],
+              "remedial": {
+                "title": "Working Backwards (Inverse Operations)",
+                "explanation": "To find the original number, undo each operation in reverse order.",
+                "rule": "Original → ×3 → +7 → 34. Reverse: 34 → −7 → ÷3 → original.",
+                "example": "34−7=27. 27÷3=9. Verify: 3×9+7=34 ✓. Algebraic: 3n+7=34 → n=9.",
+                "apply": "Always undo the LAST operation first when working backwards."
+              }
+            }
+          ]
+        },
+        {
+          "id": "kc5_c3",
+          "name": "Working Backwards — Inverse Operations",
+          "order": 3,
+          "explanation": {
+            "title": "Undo the Steps — Work Backwards!",
+            "body": "Imagine a magic machine: you put a number in, it doubles it, adds 6, and gives you 20. What number did you put in?\n\nInstead of guessing, UNDO each step in REVERSE ORDER:\n• Last step was +6 → undo it: 20 − 6 = 14\n• Before that was ×2 → undo it: 14 ÷ 2 = 7\n• Answer: the original number was 7!\n\nThe KEY RULE: operations undo like this:\n• + undoes with −\n• × undoes with ÷\n• ² undoes with √\n\nAlways reverse the ORDER too — the last thing that happened gets undone FIRST.",
+            "key_idea": "To work backwards, undo each operation in reverse order using the inverse operation."
+          },
+          "story_example": {
+            "title": "Riya's Secret Number 🔍",
+            "body": "Riya tells her friend: 'I thought of a number, tripled it, then subtracted 4. I got 20.' Her friend works backwards: 20 + 4 = 24 (undo the subtraction), then 24 ÷ 3 = 8 (undo the tripling). Riya's secret number was 8! Try it: 8 × 3 = 24, 24 − 4 = 20 ✓"
+          },
+          "solved_examples": [
+            {
+              "question": "I double a number and add 4. The result is 18. What is the number?",
+              "steps": [
+                "Last step: +4. Undo: 18 − 4 = 14",
+                "Before that: ×2. Undo: 14 ÷ 2 = 7",
+                "Check: 7 × 2 + 4 = 18 ✓"
+              ],
+              "answer": "7"
+            },
+            {
+              "question": "I subtract 3 from a number, then multiply by 4. The result is 28. What is the number?",
+              "steps": [
+                "Last step: ×4. Undo: 28 ÷ 4 = 7",
+                "Before that: −3. Undo: 7 + 3 = 10",
+                "Check: (10 − 3) × 4 = 28 ✓"
+              ],
+              "answer": "10"
+            },
+            {
+              "question": "I triple a number, add 6, then halve it. The result is 12. What is the number?",
+              "steps": [
+                "Last step: ÷2. Undo: 12 × 2 = 24",
+                "Before that: +6. Undo: 24 − 6 = 18",
+                "Before that: ×3. Undo: 18 ÷ 3 = 6",
+                "Check: 6×3=18, 18+6=24, 24÷2=12 ✓"
+              ],
+              "answer": "6"
+            }
+          ],
+          "questions": [
+            {
+              "id": "kc5_c3_q1",
+              "difficulty": 1,
+              "question": "A number is multiplied by 3, then 7 is added. The result is 34. What is the number?",
+              "options": [
+                {"key": "A", "text": "7"},
+                {"key": "B", "text": "8"},
+                {"key": "C", "text": "9"},
+                {"key": "D", "text": "10"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Work backwards: 34 − 7 = 27 (undo +7). Then 27 ÷ 3 = 9 (undo ×3). Answer: 9.",
+              "expected_time": 45,
+              "base_score": 10,
+              "hints": [
+                "The LAST thing that happened was '+7'. To undo it, subtract 7 from 34.",
+                "34 − 7 = 27. Now the PREVIOUS step was '×3'. To undo it, divide 27 by 3.",
+                "27 ÷ 3 = 9. Check: 9 × 3 + 7 = 27 + 7 = 34 ✓"
+              ],
+              "remedial": {
+                "title": "Working Backwards — Two Steps",
+                "explanation": "When a question describes a sequence of operations and gives the final result, undo each step in reverse order.",
+                "rule": "Undo the LAST operation first, then the second-to-last, and so on. Use inverse operations: + ↔ −, × ↔ ÷.",
+                "example": "×3 then +7 gives 34. Backwards: 34−7=27, 27÷3=9.",
+                "apply": "Always check your answer by going forwards: 9×3=27, 27+7=34 ✓"
+              }
+            },
+            {
+              "id": "kc5_c3_q2",
+              "difficulty": 2,
+              "question": "Priya thinks of a number, doubles it, then subtracts 5. The result is 11. What was her number?",
+              "options": [
+                {"key": "A", "text": "6"},
+                {"key": "B", "text": "7"},
+                {"key": "C", "text": "8"},
+                {"key": "D", "text": "9"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Work backwards: 11 + 5 = 16 (undo −5). Then 16 ÷ 2 = 8 (undo ×2). Answer: 8.",
+              "expected_time": 55,
+              "base_score": 10,
+              "hints": [
+                "The last step was '−5'. To undo subtraction, you add. So start with 11 + 5.",
+                "11 + 5 = 16. Before that, the number was doubled (×2). To undo multiplying by 2, divide by 2.",
+                "16 ÷ 2 = 8. Verify: 8 × 2 − 5 = 16 − 5 = 11 ✓"
+              ],
+              "remedial": {
+                "title": "Working Backwards — Undo in Reverse Order",
+                "explanation": "The order of undoing matters! The last operation must be undone first.",
+                "rule": "If: number → ×2 → −5 → 11, then backwards: 11 → +5 → ÷2 → original number.",
+                "example": "11+5=16, 16÷2=8. Original number = 8.",
+                "apply": "Check: 8×2=16, 16−5=11 ✓"
+              }
+            },
+            {
+              "id": "kc5_c3_q3",
+              "difficulty": 3,
+              "question": "A number is tripled, 6 is added, and then the result is halved to give 15. What was the original number?",
+              "options": [
+                {"key": "A", "text": "6"},
+                {"key": "B", "text": "7"},
+                {"key": "C", "text": "8"},
+                {"key": "D", "text": "9"}
+              ],
+              "correct_answer": "C",
+              "explanation": "Work backwards: 15×2=30 (undo ÷2). 30−6=24 (undo +6). 24÷3=8 (undo ×3). Answer: 8.",
+              "expected_time": 65,
+              "base_score": 10,
+              "hints": [
+                "Three steps happened: ×3, then +6, then ÷2. The LAST step was ÷2. Undo it: multiply 15 by 2.",
+                "15 × 2 = 30. Now undo the +6: subtract 6. 30 − 6 = 24.",
+                "Now undo the ×3: divide by 3. 24 ÷ 3 = 8. Check: 8×3=24, 24+6=30, 30÷2=15 ✓"
+              ],
+              "remedial": {
+                "title": "Working Backwards — Three Steps",
+                "explanation": "With three operations, undo them one by one in reverse order. Write out each step clearly.",
+                "rule": "×3 then +6 then ÷2 gives 15. Undo: 15×2=30, 30−6=24, 24÷3=8.",
+                "example": "Think of it like peeling an onion — remove the last layer first.",
+                "apply": "Always verify by going forward: 8×3+6=30, 30÷2=15 ✓"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

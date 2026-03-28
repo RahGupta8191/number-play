@@ -1,0 +1,82 @@
+{
+  "_comment": "Sample session payload — exact schema sent to POST /complete-session. Passes all validation checks.",
+
+  "_session_rules": {
+    "one_payload_per_session": "Only one final payload allowed per session_id. Duplicates rejected with HTTP 409.",
+    "sent_on_completion": "Payload is sent when the student finishes the chapter or explicitly ends the session.",
+    "no_continuous_submission": true,
+    "retry_on_failure": "Failed payloads stored in failed_payloads.json with same session_id for retry. No new session_id generated.",
+    "missing_topic_scores": "null (NaN) — never 0 for unvisited KCs",
+    "student_id_source": "Comes from auth/session (localStorage), never fabricated"
+  },
+
+  "student_id": "rahul_gupta",
+  "session_id": "a3f9d2c1-84be-4e6a-b2f0-1234abcd5678",
+  "chapter_id": "grade7_number_play",
+
+  "total_attempted": 20,
+  "correct": 15,
+  "wrong": 5,
+  "hints_used": 6,
+  "time_spent": 1140,
+
+  "topic_scores": {
+    "kc1": 82.5,
+    "kc2": 67.3,
+    "kc3": null,
+    "kc4": 91.0,
+    "kc5": null
+  },
+
+  "completion_status": "partial",
+
+  "_validation_checks": {
+    "correct_plus_wrong_lte_attempted": "15 + 5 = 20 <= 20 PASS",
+    "attempted_lte_total_questions":    "20 <= 45 PASS",
+    "hints_lte_3x_attempted":           "6 <= 60 PASS",
+    "topic_scores_in_range":            "82.5, 67.3, 91.0 in [0,100]; kc3=null, kc5=null (not visited) PASS",
+    "no_fabricated_values":             "All values computed from actual interaction PASS",
+    "null_not_zero_for_missing_kcs":    "kc3 and kc5 not attempted -> null (NaN), not 0 PASS"
+  },
+
+  "_scoring_formula": {
+    "formula": "PersonalizedScore = BaseScore × AttemptFactor × HintFactor × TimeFactor",
+    "base_score_per_question": 10,
+    "max_score_per_question": 10,
+    "attempt_factor": {
+      "attempt_1": 1.0,
+      "attempt_2": 0.8,
+      "attempt_3": 0.6,
+      "rationale": "Higher attempt penalty ensures first-try correctness is rewarded most"
+    },
+    "hint_factor": {
+      "hints_0": 1.0,
+      "hints_1": 0.9,
+      "hints_2": 0.8,
+      "hints_3": 0.7,
+      "rationale": "Using hints reduces score to discourage reliance on scaffolding"
+    },
+    "time_factor": {
+      "within_T":    1.0,
+      "T_to_1.5T":  0.9,
+      "1.5T_to_2T": 0.8,
+      "over_2T":     0.7,
+      "rationale": "Faster answers (within expected time) earn full time credit"
+    },
+    "topic_score_update": "new = 0.7 × current + 0.3 × (earned / base × 100), clamped to [0, 100]"
+  },
+
+  "_content_structure": {
+    "chapter_id": "grade7_number_play",
+    "total_subtopics": 5,
+    "total_concepts": 15,
+    "total_questions": 45,
+    "subtopics": [
+      { "id": "kc1", "name": "Number Patterns",        "concepts": 3, "questions": 9 },
+      { "id": "kc2", "name": "Odd and Even Numbers",   "concepts": 3, "questions": 9 },
+      { "id": "kc3", "name": "Divisibility Rules",     "concepts": 3, "questions": 9 },
+      { "id": "kc4", "name": "Number Sequences",       "concepts": 3, "questions": 9 },
+      { "id": "kc5", "name": "Logical Number Puzzles", "concepts": 3, "questions": 9 }
+    ]
+  }
+}
