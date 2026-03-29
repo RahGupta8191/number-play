@@ -114,6 +114,7 @@ class AttemptRecord(BaseModel):
     question_id: str
     concept_id: str
     subtopic_id: str
+    session_id: Optional[str] = None
     attempts: int
     correctness: bool
     time_taken: int
@@ -186,7 +187,10 @@ class DashboardResponse(BaseModel):
     total_attempted: int
     total_correct: int
     total_hints_used: int
-    overall_score: float
+    overall_score: float          # points earned / max possible × 100
     current_level: int
     badges: List[str]
     recent_attempts: List[AttemptRecord]
+    first_attempt_correct: int = 0   # questions correct on first try (no retries)
+    total_score_earned: float = 0.0  # raw points earned (sum of score_earned)
+    max_possible_score: int = 0      # total_attempted × 10

@@ -60,8 +60,8 @@ export default function DashboardPage() {
     );
   }
 
-  const accuracy = data.total_attempted > 0
-    ? Math.round((data.total_correct / data.total_attempted) * 100)
+  const firstAttemptAccuracy = data.total_attempted > 0
+    ? Math.round((data.first_attempt_correct / data.total_attempted) * 100)
     : 0;
 
   const levelLabels = ["", "Beginner", "Intermediate", "Advanced"];
@@ -83,10 +83,10 @@ export default function DashboardPage() {
       {/* ── Stats ───────────────────────────────────────────────────────── */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         {[
-          { label: "Attempted",  value: data.total_attempted,               sub: "questions"  },
-          { label: "Correct",    value: data.total_correct,                 sub: "answers"    },
-          { label: "Accuracy",   value: `${accuracy}%`,                     sub: "overall"    },
-          { label: "Hints Used", value: data.total_hints_used,              sub: "total"      },
+          { label: "Attempted",        value: data.total_attempted,                    sub: "questions"        },
+          { label: "Correct",          value: data.total_correct,                      sub: "answers"          },
+          { label: "1st-Try Correct",  value: `${firstAttemptAccuracy}%`,              sub: "no retries needed"},
+          { label: "Hints Used",       value: data.total_hints_used,                   sub: "total"            },
         ].map((s) => (
           <div key={s.label} className="bg-white border border-gray-200 rounded-2xl p-4 text-center">
             <p className="text-3xl font-black text-brand-purple">{s.value}</p>
@@ -99,9 +99,12 @@ export default function DashboardPage() {
       {/* ── Overall score ───────────────────────────────────────────────── */}
       <div className="bg-white border border-gray-200 rounded-2xl p-6 flex items-center justify-between gap-6">
         <div>
-          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Overall Score</p>
-          <p className="text-5xl font-black text-brand-purple">{data.overall_score.toFixed(1)}</p>
-          <p className="text-gray-400 text-sm font-semibold mt-1">out of 100</p>
+          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Score Efficiency</p>
+          <p className="text-5xl font-black text-brand-purple">{data.overall_score.toFixed(1)}%</p>
+          <p className="text-gray-400 text-sm font-semibold mt-1">
+            {data.total_score_earned} / {data.max_possible_score} pts earned
+          </p>
+          <p className="text-xs text-gray-400 mt-1">Score = Base × Attempt × Hint × Speed</p>
         </div>
         <div className="text-right">
           <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Level</p>

@@ -96,10 +96,13 @@ export interface DashboardResponse {
   total_attempted: number;
   total_correct: number;
   total_hints_used: number;
-  overall_score: number;
+  overall_score: number;        // points earned / max possible × 100
   current_level: number;
   badges: string[];
   recent_attempts: AttemptRecord[];
+  first_attempt_correct: number;
+  total_score_earned: number;
+  max_possible_score: number;
 }
 
 export interface SessionPayload {

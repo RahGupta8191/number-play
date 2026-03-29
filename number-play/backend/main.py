@@ -440,27 +440,39 @@ def dashboard(session_id: str, student_id: str):
         raise HTTPException(status_code=403, detail="student_id mismatch.")
 
     history = learner.get("attempt_history", [])
+
+    # last attempt per question wins
     seen: dict = {}
     for a in history:
         seen[a["question_id"]] = a
 
     total_attempted = len(seen)
-    total_correct = sum(1 for a in seen.values() if a.get("correctness", False))
-    total_hints = sum(a.get("hints_used", 0) for a in seen.values())
+    total_correct   = sum(1 for a in seen.values() if a.get("correctness", False))
+    total_hints     = sum(a.get("hints_used", 0) for a in seen.values())
+
+    # First-attempt correct: correct on attempts==1 (no retries needed)
+    first_attempt_correct = sum(
+        1 for a in history
+        if a.get("attempts", 1) == 1 and a.get("correctness", False)
+    )
+
+    # Points-based overall score: matches PPT formula
+    # Score = BaseScore × AttemptFactor × HintFactor × TimeFactor
+    total_score_earned = sum(a.get("score_earned", 0.0) for a in history)
+    max_possible = total_attempted * 10  # base_score is 10 per question
+    overall = round((total_score_earned / max_possible * 100), 1) if max_possible > 0 else 0.0
 
     topic_scores = learner.get("topic_scores", {})
-    non_zero = [v for v in topic_scores.values() if v > 0]
-    overall = round(sum(non_zero) / len(non_zero), 2) if non_zero else 0.0
 
     badges = []
     if total_correct >= 5:
-        badges.append("⭐ 5 Correct Answers")
+        badges.append("5 Correct Answers")
     if total_hints == 0 and total_correct > 0:
-        badges.append("🏆 No Hints Needed")
+        badges.append("No Hints Needed")
     if overall >= 80:
-        badges.append("🔥 Top Scorer")
-    if total_correct >= total_attempted > 0 and total_attempted >= 3:
-        badges.append("✅ Perfect Session")
+        badges.append("Top Scorer")
+    if first_attempt_correct == total_attempted and total_attempted >= 3:
+        badges.append("First-Try Master")
 
     recent = sorted(history, key=lambda a: a.get("timestamp", ""), reverse=True)[:5]
     recent_attempts = [AttemptRecord(**a) for a in recent]
@@ -476,6 +488,9 @@ def dashboard(session_id: str, student_id: str):
         current_level=learner.get("current_level", 1),
         badges=badges,
         recent_attempts=recent_attempts,
+        first_attempt_correct=first_attempt_correct,
+        total_score_earned=round(total_score_earned, 1),
+        max_possible_score=max_possible,
     )
 
 
