@@ -136,15 +136,19 @@ def start_session(req: StartSessionRequest):
     session_id = str(uuid.uuid4())
     now = _now()
 
-    # Carry over progress if this student has learned before
+    # Carry over mastery state (scores, level, difficulty targets) but NOT attempt history.
+    # Each session starts fresh so quiz mode always serves all questions regardless of
+    # what was answered in a previous session.
     existing = db.load_learner_by_student_id(req.student_id.strip())
     profile = {
         "student_id": req.student_id.strip(),
         "session_id": session_id,
         "chapter_id": req.chapter_id,
-        "current_level": existing["current_level"] if existing else 1,
-        "topic_scores": existing["topic_scores"] if existing else {"kc1": 0.0, "kc2": 0.0, "kc3": 0.0, "kc4": 0.0, "kc5": 0.0},
-        "attempt_history": existing["attempt_history"] if existing else [],
+        "current_level":      existing["current_level"]      if existing else 1,
+        "topic_scores":       existing["topic_scores"]       if existing else {"kc1": 0.0, "kc2": 0.0, "kc3": 0.0, "kc4": 0.0, "kc5": 0.0},
+        "difficulty_targets": existing.get("difficulty_targets", {}) if existing else {},
+        "kc_streaks":         existing.get("kc_streaks", {})         if existing else {},
+        "attempt_history": [],   # always fresh — history does not carry across sessions
         "created_at": now,
         "updated_at": now,
     }
@@ -231,6 +235,7 @@ def submit_answer(req: SubmitAnswerRequest):
         "question_id": req.question_id,
         "concept_id": q["_concept_id"],
         "subtopic_id": subtopic_id,
+        "session_id": learner["session_id"],
         "attempts": attempts_now,
         "correctness": correct,
         "time_taken": req.time_taken,

@@ -118,10 +118,19 @@ def get_next_question(
     history    = learner.get("attempt_history", [])
     attempted  = {a["question_id"] for a in history}
 
-    # Questions not yet answered correctly
-    correctly_done = {
-        a["question_id"] for a in history if a.get("correctness", False)
-    }
+    # In quiz mode, only count questions answered correctly in THIS session.
+    # This prevents old cross-session history from blocking quiz questions.
+    current_session_id = learner.get("session_id", "")
+    if subtopic_filter:
+        correctly_done = {
+            a["question_id"] for a in history
+            if a.get("correctness", False)
+            and a.get("session_id", "") == current_session_id
+        }
+    else:
+        correctly_done = {
+            a["question_id"] for a in history if a.get("correctness", False)
+        }
     remaining = [q for q in pool if q["id"] not in correctly_done]
 
     if not remaining:
@@ -198,10 +207,18 @@ def determine_next_action(
         else all_questions
     )
 
-    correctly_done = {
-        a["question_id"] for a in learner.get("attempt_history", [])
-        if a.get("correctness", False)
-    }
+    current_session_id = learner.get("session_id", "")
+    history = learner.get("attempt_history", [])
+    if subtopic_filter:
+        correctly_done = {
+            a["question_id"] for a in history
+            if a.get("correctness", False)
+            and a.get("session_id", "") == current_session_id
+        }
+    else:
+        correctly_done = {
+            a["question_id"] for a in history if a.get("correctness", False)
+        }
 
     if correct:
         if len(correctly_done) >= len(pool):
