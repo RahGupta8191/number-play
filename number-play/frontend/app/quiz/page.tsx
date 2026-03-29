@@ -253,6 +253,7 @@ function QuizContent() {
 
   // Quiz result accumulation
   const [quizResults, setQuizResults]     = useState<{ correct: number; wrong: number; score: number }>({ correct: 0, wrong: 0, score: 0 });
+  const [isRetake, setIsRetake]           = useState(false);
 
   // ── Timer ──────────────────────────────────────────────────────────────
 
@@ -271,7 +272,7 @@ function QuizContent() {
 
   // ── Fetch next question (KC-scoped) ───────────────────────────────────
 
-  const fetchNext = useCallback(async (sid: string, sesId: string) => {
+  const fetchNext = useCallback(async (sid: string, sesId: string, retake = false) => {
     stopTimer();
     setPhase("loading");
     setSelected(null);
@@ -282,7 +283,7 @@ function QuizContent() {
     setErrorMsg("");
 
     try {
-      const res = await getNextQuestion(sesId, sid, kcId);
+      const res = await getNextQuestion(sesId, sid, kcId, retake);
       if ("status" in res && res.status === "complete") {
         setPhase("complete");
         return;
@@ -362,26 +363,19 @@ function QuizContent() {
       setQuizResults((r) => ({ ...r, wrong: r.wrong + 1 }));
 
       if (newAttempts >= 3) {
-        // 3rd wrong → reveal hint 2 + remedial
-        const newHints = [...autoHints];
-        if (newHints.length < 2 && question.hints_available >= 2) {
-          try {
-            const h = await getHint(sessionId, studentId, question.question_id, 2);
-            newHints.push(h.hint_text);
-          } catch (_) {}
-        }
-        setAutoHints(newHints);
+        // 3rd wrong → remedial (hints already revealed progressively)
         try {
           const rem = await getRemedial(sessionId, studentId, question.question_id);
           setRemedial(rem);
         } catch (_) {}
         setPhase("remedial");
       } else {
-        // 2nd wrong → reveal hint 1
-        if (newAttempts >= 2 && autoHints.length < 1 && question.hints_available >= 1) {
+        // Reveal next hint progressively: hint 1 after attempt 1, hint 2 after attempt 2
+        const nextHintLevel = autoHints.length + 1;
+        if (nextHintLevel <= question.hints_available) {
           try {
-            const h = await getHint(sessionId, studentId, question.question_id, 1);
-            setAutoHints([h.hint_text]);
+            const h = await getHint(sessionId, studentId, question.question_id, nextHintLevel);
+            setAutoHints((prev) => [...prev, h.hint_text]);
           } catch (_) {}
         }
         setPhase("feedback");
@@ -469,7 +463,16 @@ function QuizContent() {
         </div>
 
         <div className="flex flex-col gap-3">
-          <button onClick={() => { localStorage.removeItem(`attempted_concepts_${kcId}`); window.location.reload(); }} className="btn-primary w-full">
+          <button
+            onClick={() => {
+              localStorage.removeItem(`attempted_concepts_${kcId}`);
+              setQuizResults({ correct: 0, wrong: 0, score: 0 });
+              setAnswered(0);
+              setIsRetake(true);
+              fetchNext(studentId, sessionId, true);
+            }}
+            className="btn-primary w-full"
+          >
             Retake Quiz
           </button>
           <button onClick={() => router.push("/chapter")} className="btn-secondary w-full">

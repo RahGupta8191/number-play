@@ -92,6 +92,7 @@ def get_next_question(
     learner: Dict,
     all_questions: Optional[List[Dict]] = None,
     subtopic_filter: Optional[str] = None,
+    retake: bool = False,
 ) -> Optional[Dict]:
     """
     Select the next adaptive question for the learner.
@@ -118,10 +119,12 @@ def get_next_question(
     history    = learner.get("attempt_history", [])
     attempted  = {a["question_id"] for a in history}
 
-    # In quiz mode, only count questions answered correctly in THIS session.
-    # This prevents old cross-session history from blocking quiz questions.
+    # In quiz retake mode, ignore correctly_done so all KC questions are fresh.
+    # In normal quiz mode, scope correctly_done to current session only.
     current_session_id = learner.get("session_id", "")
-    if subtopic_filter:
+    if subtopic_filter and retake:
+        correctly_done = set()   # retake: all questions available again
+    elif subtopic_filter:
         correctly_done = {
             a["question_id"] for a in history
             if a.get("correctness", False)

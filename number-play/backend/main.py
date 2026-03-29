@@ -167,10 +167,12 @@ def next_question(
     session_id: str,
     student_id: str,
     subtopic_id: Optional[str] = None,
+    retake: bool = False,
 ):
     """
     Return the next adaptive question for the learner.
     Optional subtopic_id restricts selection to a single KC (quiz mode).
+    retake=true ignores correctly_done so all KC questions are available again.
     """
     learner = _load_or_404(session_id)
 
@@ -178,7 +180,7 @@ def next_question(
         raise HTTPException(status_code=403, detail="student_id mismatch.")
 
     all_questions = cl.get_questions_ordered()
-    q = pm.get_next_question(learner, all_questions, subtopic_filter=subtopic_id)
+    q = pm.get_next_question(learner, all_questions, subtopic_filter=subtopic_id, retake=retake)
 
     if q is None:
         return {"status": "complete", "message": "You have completed this section!"}

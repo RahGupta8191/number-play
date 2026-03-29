@@ -49,9 +49,11 @@ export async function getNextQuestion(
   sessionId: string,
   studentId: string,
   subtopicId?: string,
+  retake?: boolean,
 ): Promise<QuestionResponse | { status: "complete"; message: string }> {
   const params = new URLSearchParams({ session_id: sessionId, student_id: studentId });
   if (subtopicId) params.set("subtopic_id", subtopicId);
+  if (retake) params.set("retake", "true");
   return request<QuestionResponse | { status: "complete"; message: string }>(
     `/next-question?${params}`
   );
