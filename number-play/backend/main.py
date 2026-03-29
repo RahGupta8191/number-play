@@ -462,7 +462,17 @@ def dashboard(session_id: str, student_id: str):
     max_possible = total_attempted * 10  # base_score is 10 per question
     overall = round((total_score_earned / max_possible * 100), 1) if max_possible > 0 else 0.0
 
-    topic_scores = learner.get("topic_scores", {})
+    # Only show KC scores for KCs attempted in the current session
+    current_session_id = learner.get("session_id", "")
+    current_session_subtopics = {
+        a["subtopic_id"] for a in history
+        if a.get("session_id", "") == current_session_id
+    }
+    raw_topic_scores = learner.get("topic_scores", {})
+    topic_scores = {
+        k: (v if k in current_session_subtopics else 0.0)
+        for k, v in raw_topic_scores.items()
+    }
 
     badges = []
     if total_correct >= 5:

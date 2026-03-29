@@ -304,6 +304,7 @@ export default function LearnPage() {
   const [answered, setAnswered]           = useState(0);
   const [errorMsg, setErrorMsg]           = useState("");
   const [submitting, setSubmitting]       = useState(false);
+  const [showReviewPrompt, setShowReviewPrompt] = useState(false);
   const TOTAL = 45;
 
   // ── Timer ──────────────────────────────────────────────────────────────
@@ -334,6 +335,7 @@ export default function LearnPage() {
     setRemedial(null);
     setAttempts(0);
     setErrorMsg("");
+    setShowReviewPrompt(false);
 
     try {
       const res = await getNextQuestion(sesId, sid);
@@ -402,31 +404,26 @@ export default function LearnPage() {
 
       if (res.correct) {
         setAnswered((n) => n + 1);
+        setShowReviewPrompt(res.topic_score < 70);
         setPhase("feedback");
         return;
       }
 
       if (newAttempts >= 3) {
-        // 3rd wrong → reveal hint 2 + show remedial
-        const newHints = [...autoHints];
-        if (newHints.length < 2 && question.hints_available >= 2) {
-          try {
-            const h = await getHint(sessionId, studentId, question.question_id, 2);
-            newHints.push(h.hint_text);
-          } catch (_) {}
-        }
-        setAutoHints(newHints);
+        // 3rd wrong → remedial (hints already progressively revealed)
         try {
           const rem = await getRemedial(sessionId, studentId, question.question_id);
           setRemedial(rem);
         } catch (_) {}
         setPhase("remedial");
       } else {
-        // 2nd wrong → reveal hint 1
-        if (newAttempts >= 2 && autoHints.length < 1 && question.hints_available >= 1) {
+        // After each wrong attempt, reveal the next hint before the next try
+        // Attempt 1 wrong → reveal hint 1; Attempt 2 wrong → reveal hint 2
+        const nextHintLevel = autoHints.length + 1;
+        if (nextHintLevel <= question.hints_available) {
           try {
-            const h = await getHint(sessionId, studentId, question.question_id, 1);
-            setAutoHints([h.hint_text]);
+            const h = await getHint(sessionId, studentId, question.question_id, nextHintLevel);
+            setAutoHints((prev) => [...prev, h.hint_text]);
           } catch (_) {}
         }
         setPhase("feedback");
@@ -613,6 +610,21 @@ export default function LearnPage() {
               >
                 {submitting ? "Checking…" : "Check Answer"}
               </button>
+            )}
+
+            {phase === "feedback" && result?.correct && showReviewPrompt && question && (
+              <div className="bg-amber-50 border border-amber-300 rounded-xl px-4 py-3 text-sm">
+                <p className="font-black text-amber-700 mb-1">Review Recommended</p>
+                <p className="text-amber-600 mb-2">
+                  Your mastery of <strong>{question.subtopic_name}</strong> is below 70%. Re-reading the lesson will help you improve.
+                </p>
+                <button
+                  onClick={() => router.push(`/chapter?kc=${question.subtopic_id}`)}
+                  className="text-xs font-black text-amber-700 underline hover:text-amber-900"
+                >
+                  Go to Lecture →
+                </button>
+              </div>
             )}
 
             {phase === "feedback" && result?.correct && (
