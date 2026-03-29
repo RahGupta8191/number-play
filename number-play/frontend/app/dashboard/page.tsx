@@ -76,7 +76,7 @@ export default function DashboardPage() {
           {data.student_id}
         </h1>
         <p className="text-gray-400 text-sm mt-1 font-semibold">
-          Level {data.current_level} — {levelLabels[data.current_level] ?? "Learner"}
+          Level {data.current_level} — {levelLabels[data.current_level] ?? "Learner"} · All-time progress
         </p>
       </div>
 
@@ -98,9 +98,9 @@ export default function DashboardPage() {
 
       {/* ── Score cards ─────────────────────────────────────────────────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {/* Session score efficiency */}
+        {/* Overall score efficiency */}
         <div className="bg-white border border-gray-200 rounded-2xl p-6">
-          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Session Score</p>
+          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Overall Score</p>
           <p className="text-5xl font-black text-brand-purple">{data.overall_score.toFixed(1)}%</p>
           <p className="text-gray-400 text-sm font-semibold mt-1">
             {data.total_score_earned} / {data.max_possible_score} pts earned

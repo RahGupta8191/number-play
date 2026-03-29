@@ -79,6 +79,20 @@ def load_learner_by_student_id(student_id: str) -> Optional[dict]:
     return None
 
 
+def load_all_history_for_student(student_id: str) -> list:
+    """Return combined attempt_history from ALL sessions for a student, oldest first."""
+    with get_connection() as conn:
+        rows = conn.execute(
+            "SELECT profile_json FROM learners WHERE student_id = ? ORDER BY created_at ASC",
+            (student_id,)
+        ).fetchall()
+    history = []
+    for row in rows:
+        profile = json.loads(row["profile_json"])
+        history.extend(profile.get("attempt_history", []))
+    return history
+
+
 def load_learner(session_id: str) -> Optional[dict]:
     with get_connection() as conn:
         row = conn.execute(

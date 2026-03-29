@@ -127,6 +127,25 @@ def get_lectures(subtopic_id: str):
     }
 
 
+@app.get("/lookup-student")
+def lookup_student(student_id: str):
+    """
+    Check if a student already has a profile.
+    Returns their most recent session_id + chapter_id so the frontend
+    can resume without creating a new session.
+    """
+    existing = db.load_learner_by_student_id(student_id.strip())
+    if not existing:
+        return {"found": False}
+    return {
+        "found": True,
+        "session_id": existing["session_id"],
+        "student_id": existing["student_id"],
+        "chapter_id": existing.get("chapter_id", "grade7_number_play"),
+        "current_level": existing.get("current_level", 1),
+    }
+
+
 @app.post("/start-session", response_model=StartSessionResponse)
 def start_session(req: StartSessionRequest):
     """Create a new learner session."""
@@ -441,9 +460,11 @@ def dashboard(session_id: str, student_id: str):
     if learner["student_id"] != student_id:
         raise HTTPException(status_code=403, detail="student_id mismatch.")
 
-    history = learner.get("attempt_history", [])
+    # Aggregate attempt history across ALL sessions for this student so returning
+    # students see their cumulative progress, not just the current (empty) session.
+    history = db.load_all_history_for_student(student_id)
 
-    # last attempt per question wins
+    # last attempt per question wins (across all sessions)
     seen: dict = {}
     for a in history:
         seen[a["question_id"]] = a
@@ -458,25 +479,16 @@ def dashboard(session_id: str, student_id: str):
         if a.get("attempts", 1) == 1 and a.get("correctness", False)
     )
 
-    # Points-based overall score: matches PPT formula
-    # Score = BaseScore × AttemptFactor × HintFactor × TimeFactor
+    # Points-based overall score across all sessions
     total_score_earned = sum(a.get("score_earned", 0.0) for a in history)
     max_possible = total_attempted * 10  # base_score is 10 per question
     overall = round((total_score_earned / max_possible * 100), 1) if max_possible > 0 else 0.0
 
-    # Only show KC scores for KCs attempted in the current session
-    current_session_id = learner.get("session_id", "")
-    current_session_subtopics = {
-        a["subtopic_id"] for a in history
-        if a.get("session_id", "") == current_session_id
-    }
+    # KC scores: use the running EWA from the learner profile (already cumulative across sessions)
     raw_topic_scores = learner.get("topic_scores", {})
-    topic_scores = {
-        k: (v if k in current_session_subtopics else 0.0)
-        for k, v in raw_topic_scores.items()
-    }
+    topic_scores = dict(raw_topic_scores)
 
-    # Overall KC mastery = average of all non-zero KC scores (across all sessions)
+    # Overall KC mastery = average of all non-zero KC scores (all sessions)
     all_kc_scores = [v for v in raw_topic_scores.values() if v > 0]
     overall_kc_mastery = round(sum(all_kc_scores) / len(all_kc_scores), 1) if all_kc_scores else 0.0
 

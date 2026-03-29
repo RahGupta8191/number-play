@@ -25,6 +25,16 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
 
 // ── Session ────────────────────────────────────────────────────────────────
 
+export async function lookupStudent(studentId: string) {
+  return request<{
+    found: boolean;
+    session_id?: string;
+    student_id?: string;
+    chapter_id?: string;
+    current_level?: number;
+  }>(`/lookup-student?student_id=${encodeURIComponent(studentId)}`);
+}
+
 export async function startSession(studentId: string, chapterId = "grade7_number_play") {
   return request<{ session_id: string; student_id: string; chapter_id: string; message: string }>(
     "/start-session",
