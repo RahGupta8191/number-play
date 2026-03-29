@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { startSession, lookupStudent } from "@/lib/api";
+import { startSession } from "@/lib/api";
 
 const KCS = [
   {
@@ -60,17 +60,8 @@ export default function HomePage() {
     setLoading(true);
     setError("");
     try {
-      // If the student already exists, resume their most recent session
-      // so their progress (KC mastery, level, dashboard) is preserved.
-      const lookup = await lookupStudent(trimmed);
-      if (lookup.found && lookup.session_id && lookup.student_id && lookup.chapter_id) {
-        localStorage.setItem("studentId", lookup.student_id);
-        localStorage.setItem("sessionId", lookup.session_id);
-        localStorage.setItem("chapterId", lookup.chapter_id);
-        setReturning(lookup.student_id);
-        return;
-      }
-      // New student — create a fresh session
+      // Always create a fresh session so attempt counts start at 0.
+      // The dashboard aggregates history across all sessions separately.
       const res = await startSession(trimmed);
       localStorage.setItem("studentId", res.student_id);
       localStorage.setItem("sessionId", res.session_id);
