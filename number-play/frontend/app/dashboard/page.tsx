@@ -96,22 +96,29 @@ export default function DashboardPage() {
         ))}
       </div>
 
-      {/* ── Overall score ───────────────────────────────────────────────── */}
-      <div className="bg-white border border-gray-200 rounded-2xl p-6 flex items-center justify-between gap-6">
-        <div>
-          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Score Efficiency</p>
+      {/* ── Score cards ─────────────────────────────────────────────────── */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {/* Session score efficiency */}
+        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Session Score</p>
           <p className="text-5xl font-black text-brand-purple">{data.overall_score.toFixed(1)}%</p>
           <p className="text-gray-400 text-sm font-semibold mt-1">
             {data.total_score_earned} / {data.max_possible_score} pts earned
           </p>
           <p className="text-xs text-gray-400 mt-1">Score = Base × Attempt × Hint × Speed</p>
         </div>
-        <div className="text-right">
-          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Level</p>
-          <p className="text-xl font-black text-gray-800">{levelLabels[data.current_level] ?? "Learner"}</p>
-          <p className="text-xs text-gray-400 mt-1">
-            {data.current_level < 3 ? "Keep improving to advance" : "Top level reached!"}
+
+        {/* Overall KC mastery across all sessions */}
+        <div className="bg-white border border-gray-200 rounded-2xl p-6">
+          <p className="text-xs text-gray-400 font-black uppercase tracking-widest mb-1">Overall KC Mastery</p>
+          <p className="text-5xl font-black text-brand-purple">{data.overall_kc_mastery.toFixed(1)}%</p>
+          <p className="text-gray-400 text-sm font-semibold mt-1">
+            avg across {Object.values(data.topic_scores).filter(v => v > 0).length || Object.values(data.topic_scores).length} knowledge components
           </p>
+          <div className="mt-2 flex items-center gap-2">
+            <p className="text-xs text-gray-400 font-black uppercase tracking-widest">Level</p>
+            <p className="text-xs font-black text-gray-700">{levelLabels[data.current_level] ?? "Learner"}</p>
+          </div>
         </div>
       </div>
 

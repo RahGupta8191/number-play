@@ -103,6 +103,7 @@ export interface DashboardResponse {
   first_attempt_correct: number;
   total_score_earned: number;
   max_possible_score: number;
+  overall_kc_mastery: number;
 }
 
 export interface SessionPayload {

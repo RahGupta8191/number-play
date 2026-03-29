@@ -194,3 +194,4 @@ class DashboardResponse(BaseModel):
     first_attempt_correct: int = 0   # questions correct on first try (no retries)
     total_score_earned: float = 0.0  # raw points earned (sum of score_earned)
     max_possible_score: int = 0      # total_attempted × 10
+    overall_kc_mastery: float = 0.0  # average mastery across all attempted KCs (all sessions)

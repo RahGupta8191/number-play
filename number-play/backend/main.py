@@ -476,6 +476,10 @@ def dashboard(session_id: str, student_id: str):
         for k, v in raw_topic_scores.items()
     }
 
+    # Overall KC mastery = average of all non-zero KC scores (across all sessions)
+    all_kc_scores = [v for v in raw_topic_scores.values() if v > 0]
+    overall_kc_mastery = round(sum(all_kc_scores) / len(all_kc_scores), 1) if all_kc_scores else 0.0
+
     badges = []
     if total_correct >= 5:
         badges.append("5 Correct Answers")
@@ -503,6 +507,7 @@ def dashboard(session_id: str, student_id: str):
         first_attempt_correct=first_attempt_correct,
         total_score_earned=round(total_score_earned, 1),
         max_possible_score=max_possible,
+        overall_kc_mastery=overall_kc_mastery,
     )
 
 
